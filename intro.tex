@@ -1,0 +1,54 @@
+\section{Introduction}\label{intro}
+Malaria is one amongst the most deadly disease in the world, especially in sub-saharan Africa countries such as Senegal.
+Malaria is caused by parasitic single-celled microorganisms belonging to the Plasmodium group; it is an infectious
+disease which is transmitted to human being through bites from infected female Anopheles mosquitoes. Someone who suffers
+from  Malaria may present symptoms that typically include fever, tiredness, vomiting, and headaches. In its severe form,
+the disease can cause yellow skin, seizures, coma or death.
+
+\subsubsection{Studied problem and motivations.}
+According to the last report \cite{Wh17}  about the propagation of Malaria disease around the world, published in November 2017 by the World international Health Organization (WHO in short),
+ 216 millions of cases have been reported in 2016. As a result, the number of cases has significantly increased when compared to the 211 millions of reported Malaria patients in 2016.
+As for the number of death due to Malaria, it does not decrease between 2016 and 2017 (446.000 vs. 445.000) despite the huge effort made by governements
+and non-governmental organization to improve healthcare services and the awareness strategies, especially in critical areas. 
+When analyzing the statistics above in details, one can easily notice that the burden of the Africa region of the World 
+international Health Organization is colossal. Indeed, 90\% of Malaria cases and 90\% of deaths due to the disease were located in this area in 2016.
+More specifically, 80\% of the burden in terms of morbidity is distributed in fifteen countries, all located in Sub-saharan Africa except India. This demonstrates
+that Malaria is a real flail in Sub-saharan Africa states and Senegal is not spared at all. We investigate in this study an efficient approach to predict, using machine learning, the occurence 
+or not of Malaria when a patient has to be diagnosed. Given the patient signs and symptoms, as well as the result from the quick diagnosis test, our solution should be to 
+automatically tell if she suffers from Malaria or not with a high accuracy.
+
+Malaria is an acute problem in Senegal  due mainly to the lack of high quality healthcare services and well-formed
+staffs able to perform accurate diagnosis of diseases that patients suffer from. Over the past years, the government with 
+the help of international organizations have tried to eradicate Malaria by implementing various proactive and reactive solutions 
+to fill the gap in terms of services and human resources. However, the mortality rate is still very high, e.g. in underserved areas,
+areas without required healthcare needs, uneducated people, population with low income, etc. Most of these deaths cases are reported to be caused by inaccurate diagnosis, sometimes 
+incomplete leading to a bad prediction of the exact type of Malaria.
+On the other hand, Malaria occurence or complication can often occur during  popular events (for instance religious events such as the Grand Magal of Touba \cite{So17})
+which gather thousands of persons from everywhere in the country during a short time period. During those popular events, non-permanent medical points are set in order
+to assist and treat ill persons; the staff in a given health point might be formed sometimes by only volunteers without advanced medical skills. Each of these medical 
+points might receive and treat hundreds of patients each day with some of them potentially suffering from Malaria. 
+This appeals for the need of finding automated tools to help medical actors in their decision making process, and thereby to improve provided 
+healthcare services.   
+
+\subsubsection{Proposed diagnosis approach.}
+In this paper we present first steps towards an efficient manner to automatically diagnosis Malaria occurence or not based on patient signs and symptoms,
+and the outcome from the quick diagnosis test. We define our diagnosis task as a classical binary classification problem by considering two classes: \textquote{Malaria} and \textquote{not-Malaria}.
+Given a patient data, our main goal is to properly find to which class the patient belongs. To solve this classification problem we rely on machine learning and use the logistic regression
+function as the basis of our prediction approach. Machine learning has been largely used in several domains (e.g. Health Informatics  \cite{Du13}) for various purposes whereas logistic regression has demonstrated its efficiency when dealing with a binary classification problem. 
+ 
+As an application scenario, we focus on predicting Malaria cases in Senegal. At this end, we use  a large volume of patient record dataset collected during the most popular religious event in Senegal from the different installed health points, namely more than twenty points that deadly receive hundreds of patients.
+As an immediate result of this work, we introduce a data preparation pipeline in order to 
+\begin{inparaenum}[(i)]
+\item explore the dataset for profiling purpose;
+\item only retain records related to Malaria;
+\item clean and transform attributes, as well data values, into the extracted Malaria dataset; and 
+\item impute missing values (there were lot of missing values in the collected health dataset as reported in Section\ref{data_prep}).
+\end{inparaenum}
+Such a data preparation pipeline has been realized using \emph{OpenRefine} (formely Google Refine) to perform various cleaning and profiling tasks on our raw atient dataset and \emph{missForest}, a robust
+ algorithm for imputing  missing data of diverses types; see Section \ref{data_prep} for more details. 
+Expermients on the real world patient dataset, augmenting with a semi-synthetic dataset, show promising performance results regarding the effectiveness of the proposed approach.
+
+\subsubsection{Paper organization.}The remaining of the paper is organized as follows. We summarize the related work on data imputation and binary classification methods in Section \ref{related_work}.
+In Section \ref{data_prep} we introduce a data preparation pipeline on the raw collected patient records for the prediction phase. 
+We then present our prediction model for Malaria cases in Section \ref{prediction_model}.
+Experiments and performance analysis  on the collected real-world dataset, as well as a semi-synthetic dataset,  are detailled in Section \ref{experimentation} before we conclude in Section \ref{conclusion}. 

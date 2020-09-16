@@ -1,0 +1,113 @@
+\section{Data Preparation}\label{data_prep}
+In this section, we detail the data preparation pipeline followed to obtain a proper Malaria dataset for the prediction phase.
+We start by presenting the used data cleaning and normalization techniques.
+
+
+% data cleaning and normalization
+\subsection{Data cleaning and normalization}
+In order to set up an efficient prediction model for Malaria cases in Senegal, we have relied on a real-world patient dataset
+for validation purposes. The dataset was extracted in 2016 during the Grand Magal of Touba \cite{So17}. 
+An estimated 4-5 million individuals gather each year in the holy city of Touba, Senegal during the Grand Magal religious pilgrimage.
+Several health points are set during this religious event; every point dairly receives hundreds of patients, some of them 
+suffering from Malaria. The patient data we are using here have been manually recordered from these points in registers as no electronic
+health management system does exist.  
+
+In detail, the dataset consists of thousands of patient records having each 16 attributes. Some of these
+attributes (also knwon as features) comprise personal data about the patient, but also patient signs and symptoms
+reported by the doctor who took in charge the patient. The other attributes describe clinical data such as information about the final diagnosis
+of the doctor (the disease that the patient suffers from), the income of the quick diagnosis test, and the status (i.e. admission, 
+dead or put under observation) of the patient. For privacy concerns and some restrictions in data use, we have disregarded personal data about
+the patient during this work. Due to the fact that patient records have been collected manually in registers, we have noticed many inconsistencies 
+such as misspellings, same attribute values with different writings (e.g., \textquote{DIARRHEE INFECTIEUSE} and \textquote{INFECTIEUSE DIARRHE}),
+ and multi-valued attributes (e.g. sign and symptom reported values). We use OpenRefine \cite{Ku16,openRefine} to first clean and then normalize values in the patient dataset.
+
+OpenRefine (formerly called Google Refine) is a powerful open source tool that allows researchers or scientists to accomplish the data wrangling activity, i.e. 
+working with messy data: cleaning it; transforming it from one format into another; and extending it with Web services and external data.    
+We used the following methods provided by OpenRefine to pre-treat our raw dataset.
+
+\begin{itemize}
+\item \textbf{Text filter function:} text filter enables to expore attribute values, clean them, and to identify those that may have many variants. 
+\item \textbf{Transform functions:} OpenRefine provides two different Transform functions: preset transformations for resolving trivial formatting issues like trimming whitespaces
+and advanced transformations based on the OpenRefine Expression Language (GREL) to normalize data in batch or split them. This second class of transformations is very useful, especially when the 
+number of piece of data values to normalize is very important (doing the same task manually would be time-consuming and prone to errors). For instance, GREL allows to use a simple
+regular expression all variants of a symptom in the Symptom column.  
+\item \textbf{Cluster and edit function:} Clustering option in OpenRefine also provides users with methods to merge and normalize variations across the dataset. The power of clustering
+is that it is able to automatically detect small data variations which follow a certain pattern.  
+\end{itemize}
+
+As for the special case of multi-valued attributes such as symptom and diagnosis columns in our raw dataset, we splitted them into multiple values in distinct columns.
+Indeed, in the raw dataset information like the symptoms a given patient suffer from were stored in a single column, separated with the special character '+', e.g. \textquote{DOULEUR ARTICULAIRE}
++ \textquote{DOULEUR PELVIENNE} + \textquote{VOMISSEMENTS}.
+
+
+After this step of data cleaning and normalization, we have proceeded to the extraction of Malaria features.
+
+% Extraction of Malaria features
+\subsection{Extraction of Malaria features}
+To properly study Malaria, one needs to have a patient dataset with the main features of the disease. 
+Unfortunately, some of these Malaria features were not explicitly specified in our raw dataset.
+As a result, we have inferred twelve new attributes that better describe the signs and symptoms 
+of Malaria according to experts in the health domain. Those new attributes are : \emph{lack of appetite},
+\emph{tiredness}, \emph{fever}, \emph{cephalalgia}, \emph{nausea}, \emph{arthralgia}, 
+\emph{digestive disorders}, \emph{dizziness}, \emph{chill}, \emph{myalgia}, \emph{diarrhea}, and \emph{abdominal pain}.  
+We have then added the new attributes in our dataset and transformed this latter accordingly by filling the value of each new attribute based on the 
+list of reported signs and symptoms for every patient.
+
+A medical diagnostic is the results the analysis of the reported signs and symptoms; in general such a diagnostic is further confirmed by a medical test.
+Since our raw dataset does not contain only information about patients from Malaria, yielding to records with various diagnostics. For the purposes of 
+our study, we replaced any diagnostic that is not Malaria by the class \textquote{Not-Malaria}. At this step of our data preparaton pipeline, we came 
+up with a patient dataset that contains required Malaria features. However, our Malaria was not yet complete and ready because of values missingness.
+As a last step, we have completed our dataset by using a robust data imputation approach.
+
+% Data Imputation Approach
+
+\subsection{Missing Data Imputation}
+As shown in Table \ref{table-missing}, we observed many missing values in our dataset, affecting the majority of the data attributes. Such missing values
+should not be ignored as data completeness and quality are very important when dealing with a prediction problem; this could negatively impact the accuracy
+of our prediction and should be treat appropriately. One has to note that machine learning relies on complete dataset.
+The sources and types of missing values can be various \cite{Al18}. In our context, missingness is \emph{not
+completely random} and can be due to an incomplete knowledge of the patient data, the fact that the medical staff do not specify a attribute value when it is
+not observed, or a difficulty for the patients to properly describe some piece of information (e.g. related to the signs or symptoms of their diseases) at the
+diagnostic time. Since they might have a certain relationship between attribute values for the same patient, or even a correlation between patient records, we 
+decide to solve our problem of missing values by using imputation algorithms instead of choosing arbitrary values or removing records with missing values.  
+
+Data imputation is often used in the machine learning field when dealing with missing information. Many algorithms have been proposed in the literature \cite{Si14,Al18},
+depending on the nature of the missingness or the type of data. MissForest \cite{Ste12} has been proved to be efficient at the presence of various types (e.g. numerical data,
+string, categorical data, ect.) of data simultaneously as in our case.
+The algorithm missForest relies on Random Forest, a non-parametric prediction method that is able to to deal with mixed-type data and allows for intreactive and non-linear regression effects.
+Such a imputation algorithm aims at handling any type of input dataset by minimizing (when possible) assumption about the structural apsects of the data. Given an input dataset, missForest
+solves the missing data problem using an iterative imputation scheme by training a Random Forest on observed values in a first step, followed by predicting the missing values 
+and then proceeding iteratively until convergence. 
+
+We have applied missForest on our Malaria patient dataset by using its open-source Python implementation \cite{MF_python}. We shall study and prove in Section \ref{experimentation} the accuracy of
+the prediction made by the algorithm with the hep of the normalized root mean squared error metric.  
+
+% table of the number of missing values per attribute
+\begin{table}[!ht]
+\centering
+\begin{tabular}{cc}
+\textbf{Attribute name} & \textbf{\#missing\_values}\\
+\toprule
+Lack of appetite &    21068 \\
+digestive disorders & 21062 \\
+Loss of weight &   21017 \\
+Arthragia &     20940\\
+Chill &      20925\\
+Nausea &     20874\\
+Myalgia &    20870\\
+Tiredness&   20713 \\
+Diarrhea &     20481\\
+Vomit &        20051 \\
+Abdominal pain &  19770 \\
+Dizziness &       19628 \\
+Fever &        18245 \\
+Temperature &     17636 \\
+Arterial pressure &    16924 \\
+Cephalalgia &       15370 \\
+Diagnostic  &     2875 \\
+Quick diagnostic test &  76 \\
+\bottomrule
+\end{tabular}
+\vspace*{.5cm}
+\caption{The number of missing values per attribute}\label{table-missing}
+\end{table} 

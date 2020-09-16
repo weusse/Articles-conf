@@ -1,0 +1,87 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.20 of 2017/10/04
+%
+\documentclass[runningheads]{llncs}
+%
+\usepackage{graphicx}
+\usepackage{hyperref}
+\renewcommand\UrlFont{\color{blue}\rmfamily}
+\setlength{\parskip}{0pt}
+\raggedbottom
+
+\usepackage{amsmath}
+\usepackage{csquotes}
+\usepackage{paralist}
+\usepackage{booktabs}
+\usepackage{mathptmx}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+\usepackage{subfigure}
+
+\begin{document}
+%
+\title{Towards an efficient Prediction Model\\ of Malaria Cases in Senegal}
+%
+%\titlerunning{Abbreviated paper title}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+\author{Ousseynou Mbaye \and Mouhamadou Lamine Ba \\ Gaoussou Camara \and Alassane Sy}
+%
+\authorrunning{Ousseynou Mbaye \and M. Lamine Ba \and Gaoussou Camara \and Alassane Sy}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+%
+\institute{Universit\'e Alioune Diop de Bambey, Bambey, Senegal\\
+\email{firstmidlle.last@uadb.edu.sn}
+%\email{ousseynou.mbaye@uadb.edu.sn}\\
+%\email{mouhamadoulamine.ba@uadb.edu.sn}\\
+%\email{gaoussou.camara@uadb.edu.sn}\\
+%\email{alassane.sy@uadb.edu.sn}
+}
+%
+\maketitle              % typeset the header of the contribution
+%
+\begin{abstract}
+Among  the most deadly disease in the world, Malaria remains a real flail in Sub-saharan Africa 
+in particular. In countries like Senegal, such a situation is acute due to the lack of high quality
+healthcare services and well-formed staffs able to perform accurate diagnosis of diseases that patients suffer from. 
+This calls for the need of finding automated tools to help medical actors in their decision making process.
+In this paper, we present first steps towards an efficient way to automatically diagnosis Malaria occurence or not 
+based on patient signs and symptoms, and the outcome from the quick diagnosis test. Our prediction approach is built
+on the logistic regression function. First expermients on a real world patient dataset, as well as a semi-synthetic dataset,
+show promising performance results regarding the effectiveness of the proposed approach.
+ 
+\keywords{Malaria  \and Diagnosis \and Data imputation \and Prediction Model.}
+\end{abstract}
+%
+%
+% Introduction
+\input{intro}
+
+% Related work
+\input{related_work}
+
+% Data Preparation
+\input{data_preparation}
+
+% Prediction Model
+\input{prediction_model}
+
+% Experimentation and Results
+\input{experimentation}
+
+% Conclusion
+\input{conclusion}
+
+%
+% ---- Bibliography ----
+%
+% BibTeX users should specify bibliography style 'splncs04'.
+% References will then be sorted and formatted in the correct style.
+%
+\bibliographystyle{splncs04}
+\bibliography{biblio}
+%
+\end{document}
