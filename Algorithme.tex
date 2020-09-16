@@ -1,33 +1,24 @@
 \section{Review of evaluated ML algorithms}\label{ml_algorithms}
-We considered and comparatively evaluated  the performance of six machine learning algorithms for the task of predicting Malaria appearance for patients living in Senegal. Those algorithms are chosen among the most used ones in the health field according to studies \cite{de2018binary,tomar2013survey}. In the following we briefly describe each of them.
 
+We mainly provide a brief overview of Machine Learning and Deep Learning models for healthcare applications. \\
+
+In healthcare, Machine Learning apps can help better understand each patient's care journey, medical decisions, or the impact of new drugs. Today researchers are using machine learning algorithms in the diagnosis of several diseases such as diabetes, stroke, cancer, malaria and heart disease. In the following we discuss about some of these methods.  Those algorithms are chosen among the most used ones in the health field according to studies\cite{de2018binary,tomar2013survey}.\\
+ %Decision tree
+\textbf{Decision tree (DT)}\cite{Ro05} is a supervised classifier which is obtained by recursively partitioning the labelled set of observations. It is one of the most adopted classifiers, thanks to its simplicity and its straightforward interpretation. For CART algorithms, hyperparameters are the impurity criteria (entropy and gini), the maximum depth, the minimum samples to split and the minimum samples at a leaf
+Decision tree algorithm has been applied in many medical tasks, for examples, in increasing quality of dermatologic diagnosis[11], predicting essential hypertension [12], and predicting cardiovascular disease [13], predict and diagnose of heart disease [14].Decision tree is one of the most popular tools for classification and prediction.\\
+% Random forest
+\textbf{Random Forest (RF)}\cite{Be01} is an ensemble approach built upon many decision tree classifiers. It is a supervised classifier which requires the same hyper parameters as DT, plus the number of trees to create and the random number of features to look at when splitting the labelled data during the training step \cite{Be01}.\\
 % Naive Bayes
-\textbf{ Naive Bayes classifier (NB) }\cite{Ka17} is a \emph{supervised} machine learning algorithm, i.e. requires to be trained, used for classifying observations to given distinct classes based on \emph{input explanatory variables} (a.k.a feature or attribute).
-It is a classification technique based on the well-known \emph{Bayes’ theorem}\footnote{https://en.wikipedia.org/wiki/Bayes\%27\_theorem} with strong and naive assumptions.
-It simplifies learning by assuming that features are independent of given class.
-
-% Logistic Regression
- 
+\textbf{ Naive Bayes classifier (NB) }\cite{Ka17} is a\emph{supervised} machine learning algorithm, i.e. requires to be trained, used for classifying observations to given distinct classes based on \emph{input explanatory variables} (a.k.a feature or attribute).
+It is a classification technique based on the well-known \emph{Bayes’ theorem}\footnote{https://en.wikipedia.org/wiki/Bayes\%27\_theorem} with strong and naive assumptions. It simplifies learning by assuming that features are independent of given class.
+The Bayesian classifier has been applied in many medical issues, for examples, in measuring quality of care in psychiatric emergencies [21], predicting and diagnosis heart disease [14]. and assisting diagnosis of breast cancer [22].\\
+% Logistic Regression 
 \textbf{Logistic regression (LR)} \cite{Ph88} is a statistical model used in the machine learning domain as a supervised classifier for binary classification \cite{uddin2019comparing}. 
 It is based, in its basic form, on a logistic function to describe a binary dependent variable\cite{wang2014support,de2018binary} by considering as input 
 qualitative or/and ordinal explanatory variables  in order to measure the probability of a given class label. The greatest advantage  of the logistic regression
-classifier is the fact that you can use continuous explanatory variables and it is easier to handle more than two explanatory variables simultaneously. One the other 
-hand, the logistic regression is one of the most used multi-valued models in epidemiology.
-
-% Decision Tree
-
-\textbf{Decision tree (DT)} \cite{Ro05} is a supervised classifier which is obtained by recursively partitioning the labelled set of observations. It is one of the most adopted classifiers, thanks to its simplicity and its straightforward interpretation. For CART algorithms, hyperparameters are the impurity criteria (entropy and gini), the maximum depth, the minimum samples to split and the minimum samples at a leaf
- 
-% Random forest 
-
-\textbf{Random Forest (RF)} \cite{Be01} is an ensemble approach built upon many decision tree classifiers. It is a supervised classifier which requires the same hyper parameters as DT, plus the number of trees to create and the random number of features
-to look at when splitting the labelled data during the training step \cite{Be01}. 
+classifier is the fact that you can use continuous explanatory variables and it is easier to handle more than two explanatory variables simultaneously and its ability to quantify the strength of the relationship between each explicative variable and the variable to explain, given the other variables integrated to the model. One the other hand, the logistic regression is one of the most used multi-valued models in epidemiology[23]. In such a context, the variable to explain is often the occurrence or not of an event like a disease and the explanatory variables, i.e. the features, are those that highly impact the occurrence of this event, i.e. variables assessing the exposure to a risk factor or a protective factor, or a variable representing the confusion factor. The logistic regression is applied to predict malaria in [26] and in identification of at-risk populations in public health research and outreach [27] and the results are  are very relevant.\\
 %Support Vector Machine
- 
 \textbf{Support Vector Machine (SVM)} \cite{Ev01} is a supervised classification approach whose intuition is to represent input data in a space and to determine the optimal hyper-plane that divides that space in two regions depending on the targeted value.
-
+SVM is used to studied the diagnosis of coronary artery disease[28].\\
 % artificial neural networks
-
 \textbf{An Artificial Neural Network (ANN)} \cite{Me19} is a computational approach also referred to as a Connectionist System used in Machine Learning. ANNs are loosely modeled after the biological neural network in an attempt to replicate the way in which we learn as humans. Think of it as a computing system, structured as a series of layers, each layer consisting of one or several neurons. The types of the layers comprise \emph{input}, \emph{output} and \emph{hidden} layers \cite{anderson1972simple,raschka2015python}.
-
-
