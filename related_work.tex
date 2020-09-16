@@ -1,39 +1,8 @@
-\section{Related work}\label{related_work}
-In this section, we summarize the sate-of-the-art research on Malaria in general, and in particular the
-use of machine learning techniques to tackle the various aspects related to one of the 
-major healthcare problems worldwide which is Malaria.
+\section{relate dwork}\label{literature}
+We mainly provide a brief overview of Machine Learning and Deep Learning models for healthcare applications. 
 
-% Studies on Malaria
-As it is well-known, Malaria is caused by the bite of the female Anopheles, the most dangerous of which
-is Plasmodium falciparum. Many early works have been consequently focused on the study of the evolution and
-the distribution of the responsible mosquito, mainly with the goal to detect or diagnosis the severity of the 
-disease given an infected patient \cite{Fe03,Al09}. Recent research on Malaria have largely adopted machine learning
-and showed its ability to solve various aspects of the disease. Most of these machine learning based techniques are 
-based on the analysis of blood data obtained from high-definition microscopic screenshots as in \cite{Ku18}. The authors
-in \cite{Ku18} propose an unsupervised learning algorithm that detects and determines the types of infected blood cells.
-Used prediction approach consists of quantifying the amount of plasmodium parasites in a blood smear. In the same research intuition
-of harnessing blood, the Jordan-Elman neural network classifier introduced in \cite{Ha15}, on the other hand, to quickly determine the occurrence 
-of Malaria and its severity level as well: the neural network analyzes the features of the blood data of the patients.  
-Still using ML, DIAZ et al. have proposed in \cite{Dia09} a semi-supervised algorithm enable to quantify and classify the 
-erythrocytes infected by Malaria parasistes through microscopic images. The orginiality of this work comes from its usability
-even in the presence of thin blood drandruff infected by falciparum Plasmodium for the quantification and the classificationi tasks.
-Besides blood data, sign and symptom records were also used to study Malaria with ML methods. Indeed, decision trees based approach
-has been proposed in Nigeria \cite{Ug10} to predict the occurrence of Malaria given diagnostic data. However a decision tree suffers 
-from various limitations as a classifier. Indeed it can easily overfit or can be extremely sensitive to small pertubations in data for instance.
-Even though we both rely on signs and symptoms, the prediction model in \cite{Ug10} differs from ours on numerous facets: our model is built upon
-logistic regression and is trained using also inputs from the quick diagnosis test. In addition, we apply our method in the context of patients living in Senegal. 
-An example of previous work that has used logistic regression is that of Farida et al. in \cite{Ad10}. The logistic regression is exploited
-there for the selection of features in order to construct stable decision trees. The decision trees are then used to predict the severity
-criteria of Malaria in the context of Afghanistan. 
+In healthcare, Machine Learning apps can help better understand each patient's care journey, medical decisions, or the impact of new drugs. The survey of \cite{tomar2013survey} explores the usefulness of various data mining techniques such as classification, grouping, association, regression in the health field. This survey also highlights the applications, challenges and future issues of data mining in healthcare. The recommendation regarding the appropriate choice of available data mining technique is also discussed in this article. The authors of [2] explain the fundamental principles of logistic regression and the stages of its application. Using two examples (the quality of follow-up care for diabetics and hospital mortality after acute myocardial infarction), they demonstrate the value that this statistical tool can have in studies carried out by the medical service of the national health fund, especially in studies aimed at evaluating professional practice. Another example of previous work that has used logistic regression is that of Farida et al. \cite{adimi2010towards}. The logistic regression is exploited there for the selection of features in order to construct stable decision trees. The decision trees are then used to predict the severity criteria of Malaria in the context of Afghanistan.  
+In [18] Uddin et al, provide a broad overview of the relative performance of different variants of supervised machine learning algorithms for disease prediction. Thus, their results showed that the Support Vector Machine (SVM) algorithm is applied most frequently (in 29 studies) followed by the Naïve Bayes algorithm (in 23 studies). However, the Random Forest (RF) algorithm has shown comparatively higher accuracy. Of the 17 studies where it has been applied, RF has shown the highest accuracy in 9 of them, or 53\%. This was followed by SVM which exceeded 41\% of the studies it considered.\cite{de2018binary} Presents a reference of 7 machine learning algorithms used on binary classification tasks and applied to hospital data. In the study \cite{Ug1} Data mining acts as a solution to many health problems and it is useful for predicting early stage heart disease. The Naive Bayes algorithm is one such data mining technique that helps predict heart disease in patients. Gharehchopogh et al. \cite{gharehchopogh2012application} explain the use of medical data mining in determining methods of medical operation. They show that the decision tree algorithm designed for this case study generates a correct prediction for more than 86\% of test cases.
+Indeed, decision trees based approach has been proposed in Nigeria \cite {ugwu2012application} to predict the occurrence of Malaria given diagnostic data. In the same line of works applying machine learning, in \cite{rajpurkar2017malaria}, Pranav et al. propose Malaria likelihood prediction model built on a deep reinforcement learning (RL) agent. Such a RL predicts the probability of a patient testing positive for Malaria using answers from questions about their household. In the presented approach the authors have also dealt with the problem of determining the right question to ask next as well as the length of the survey, dynamically.
+\subsection{Description des données}
 
-
-In the same line of works applying machine learning, in \cite{Pr17}, Pranav et al. propose Malaria likelihood prediction model built on a deep reinforcement learning (RL) agent. 
-Such a RL predicts the probability of a patient testing positive for Malaria using answers from questions about their household. In 
-the presented approach the authors have also dealt with the problem of determining the right question to ask next as well as the length of the survey, dynamically.
-Moreover, statistically enhanced rule-based classification model to diagnose malaria has been proposed in \cite{Bb16}. A corresponding prototype 
-which incorporates the rules and statistical models have been implemented; the main goal of the study was to develop a statistical 
-prototype to perform clinical diagnosis of malaria given its adverse effects on the overall healthcare, yet its treatment remains 
-very expensive for the majority of the patients to afford.
-
-To the best of our knowledge this is the first work in Senegal that attempts to provide a prediction model for identifying 
-the occurrence of Malaria given patient data.  
