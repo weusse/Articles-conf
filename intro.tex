@@ -1,54 +1,23 @@
-\section{Introduction}\label{intro}
-Malaria is one amongst the most deadly disease in the world, especially in sub-saharan Africa countries such as Senegal.
-Malaria is caused by parasitic single-celled microorganisms belonging to the Plasmodium group; it is an infectious
-disease which is transmitted to human being through bites from infected female Anopheles mosquitoes. Someone who suffers
-from  Malaria may present symptoms that typically include fever, tiredness, vomiting, and headaches. In its severe form,
-the disease can cause yellow skin, seizures, coma or death.
+\section{Introduction}\label{Introduction}
+Malaria, also known as \emph{\textquote{fiévre des marais}} in French, is an infectious disease caused by a mosquito of the type \emph{Plasmodium}. 
+In its severe form, the disease can lead to \emph{yellow skin}, \emph{seizures}, \emph{coma} or \emph{death}. 
+As a result, Malaria is now recognized  and treated as a serious health problem worldwide by the World Health Organization (WHO), and particularly pandemic in Sub-Saharan Africa. 
+In 2018, an estimated 228 million cases of Malaria occurred worldwide, thanks to the  2019 World Malaria Report \cite{19WMR}. Most Malaria cases in 2018 were in the WHO African Region (213 million or 93\%). In the special case of Senegal the problem is acute because of the use of inappropriate care support means coupled with an often late and error-prone diagnostic from the local medical staff. Setting up a reliable way to predict the disease when a patient visits a doctor become then crucial in order to avoid its evolution towards a critical state.
 
-\subsubsection{Studied problem and motivations.}
-According to the last report \cite{Wh17}  about the propagation of Malaria disease around the world, published in November 2017 by the World international Health Organization (WHO in short),
- 216 millions of cases have been reported in 2016. As a result, the number of cases has significantly increased when compared to the 211 millions of reported Malaria patients in 2016.
-As for the number of death due to Malaria, it does not decrease between 2016 and 2017 (446.000 vs. 445.000) despite the huge effort made by governements
-and non-governmental organization to improve healthcare services and the awareness strategies, especially in critical areas. 
-When analyzing the statistics above in details, one can easily notice that the burden of the Africa region of the World 
-international Health Organization is colossal. Indeed, 90\% of Malaria cases and 90\% of deaths due to the disease were located in this area in 2016.
-More specifically, 80\% of the burden in terms of morbidity is distributed in fifteen countries, all located in Sub-saharan Africa except India. This demonstrates
-that Malaria is a real flail in Sub-saharan Africa states and Senegal is not spared at all. We investigate in this study an efficient approach to predict, using machine learning, the occurence 
-or not of Malaria when a patient has to be diagnosed. Given the patient signs and symptoms, as well as the result from the quick diagnosis test, our solution should be to 
-automatically tell if she suffers from Malaria or not with a high accuracy.
+Over the past years, many efforts have been done by governmental and non governmental organizations  to eradicate Malaria:  actions continuously conducted by the WHO are real examples of those.  In the research field, many studies, aiming at understanding the disease from the Plasmodium mosquito point of view or proposing automated detection tools, have been conducted \cite{Le74, ermert2011development,Hu17, Ga19}. The Rapid Diagnostic Test (RDT) \cite{Hu17} is one of the most successful and prominent introduced tool to automatically predict whether or not a given patient suffers from Malaria. It relies on the
+detection of specific Plasmodium proteins, PfHRP2, pLDH
+and aldolase. The RDT is largely used and adopted as a standard in many health structures in Sub-African countries because of its simplicity to utilize and does not require any specific domain knowledge. However as highlighted in \cite{Hu17} the RDT is not fully reliable:  in Section \ref{datasets} we show that the precision of the RDT is about 90\% for the real datasets used in this study.
+The Liverpool Model on Malaria (LMM) extended in \cite{ermert2011development} is an example of mathematical model that tries to model the parasite life cycle. It simulates the spread of Malaria at a daily resolution using the average daily temperature and the accumulated precipitation over 10 days. the final goal is to build a climate- or weather-driven Malaria model,  allowing for a better understanding of Malaria transmission dynamics. Clearly LMM is not a diagnostic system. We defer the reader to Section \ref{literature} for an exhaustive review of the literature. Despite existing works,  the accuracy of Malaria prediction is still a concern: used mechanisms, e.g. domain knowledge and RDT, in Senegal are error-prone.
 
-Malaria is an acute problem in Senegal  due mainly to the lack of high quality healthcare services and well-formed
-staffs able to perform accurate diagnosis of diseases that patients suffer from. Over the past years, the government with 
-the help of international organizations have tried to eradicate Malaria by implementing various proactive and reactive solutions 
-to fill the gap in terms of services and human resources. However, the mortality rate is still very high, e.g. in underserved areas,
-areas without required healthcare needs, uneducated people, population with low income, etc. Most of these deaths cases are reported to be caused by inaccurate diagnosis, sometimes 
-incomplete leading to a bad prediction of the exact type of Malaria.
-On the other hand, Malaria occurence or complication can often occur during  popular events (for instance religious events such as the Grand Magal of Touba \cite{So17})
-which gather thousands of persons from everywhere in the country during a short time period. During those popular events, non-permanent medical points are set in order
-to assist and treat ill persons; the staff in a given health point might be formed sometimes by only volunteers without advanced medical skills. Each of these medical 
-points might receive and treat hundreds of patients each day with some of them potentially suffering from Malaria. 
-This appeals for the need of finding automated tools to help medical actors in their decision making process, and thereby to improve provided 
-healthcare services.   
-
-\subsubsection{Proposed diagnosis approach.}
-In this paper we present first steps towards an efficient manner to automatically diagnosis Malaria occurence or not based on patient signs and symptoms,
-and the outcome from the quick diagnosis test. We define our diagnosis task as a classical binary classification problem by considering two classes: \textquote{Malaria} and \textquote{not-Malaria}.
-Given a patient data, our main goal is to properly find to which class the patient belongs. To solve this classification problem we rely on machine learning and use the logistic regression
-function as the basis of our prediction approach. Machine learning has been largely used in several domains (e.g. Health Informatics  \cite{Du13}) for various purposes whereas logistic regression has demonstrated its efficiency when dealing with a binary classification problem. 
+ With the development and increasing adoption of automated tools in the health field, machine learning  (ML) \cite{mitchell1997machine, Ug1} applications might help medical actors in their decision-making process. There are already some attempts to apply ML techniques for the prediction or a better understanding of various diseases, e.g. \cite{mbaye2019towards,gholami2017support}. For example, machine learning is used to analyze blood data obtained from high definition microscopic screenshots in \cite{gholami2017support}. On the other hand, logistic regression has been tested in \cite{mbaye2019towards} 
+ for the prediction of Malaria and provides promising results.
  
-As an application scenario, we focus on predicting Malaria cases in Senegal. At this end, we use  a large volume of patient record dataset collected during the most popular religious event in Senegal from the different installed health points, namely more than twenty points that deadly receive hundreds of patients.
-As an immediate result of this work, we introduce a data preparation pipeline in order to 
-\begin{inparaenum}[(i)]
-\item explore the dataset for profiling purpose;
-\item only retain records related to Malaria;
-\item clean and transform attributes, as well data values, into the extracted Malaria dataset; and 
-\item impute missing values (there were lot of missing values in the collected health dataset as reported in Section\ref{data_prep}).
-\end{inparaenum}
-Such a data preparation pipeline has been realized using \emph{OpenRefine} (formely Google Refine) to perform various cleaning and profiling tasks on our raw atient dataset and \emph{missForest}, a robust
- algorithm for imputing  missing data of diverses types; see Section \ref{data_prep} for more details. 
-Expermients on the real world patient dataset, augmenting with a semi-synthetic dataset, show promising performance results regarding the effectiveness of the proposed approach.
-
-\subsubsection{Paper organization.}The remaining of the paper is organized as follows. We summarize the related work on data imputation and binary classification methods in Section \ref{related_work}.
-In Section \ref{data_prep} we introduce a data preparation pipeline on the raw collected patient records for the prediction phase. 
-We then present our prediction model for Malaria cases in Section \ref{prediction_model}.
-Experiments and performance analysis  on the collected real-world dataset, as well as a semi-synthetic dataset,  are detailled in Section \ref{experimentation} before we conclude in Section \ref{conclusion}. 
+ In this paper, we propose an  extensive comparative study of six machine learning algorithms, among the most popular for the prediction of Maria in Senegal. The evaluated and compared ML algorithms are \textbf{Naive Bayes} (NB) \cite{Ka17}, \textbf{Logistic Regression} (LR) \cite{Ph88},  \textbf{Decision Tree} (DT) \cite{Ro05}, \textbf{Support Vector Machine} (SVM) \cite{Ev01},
+ \textbf{Random Forest} (RF) \cite{Be01},
+ and \textbf{Artificial Neural Network} (ANN) \cite{Me19}. Whereas the four first algorithms are simple models, the two last ones are built on more complex learning strategies. RF is an ensembling model and ANN performs Deep Learning. We conducted experiments on five datasets based on the two real world datasets about Senegalese citizens that suffer or not from Malaria. These two datasets have been collected in two different contexts and contain clinical data such as sign, symptom and final diagnostic of patients living in distinct locations in Senegal (for the first dataset) or within the same area (for the second dataset). Those patients have been examined by doctors in given health services and their clinical data recorded: for each patient the final diagnostic is provided with the corresponding signs and symptoms. The outcome of the RDT is also provided. To evaluate the performance of every considered algorithm we have considered common measures of the accuracy of a prediction system that are \emph{Precision}, \emph{Recall}, \emph{F1-score}, \emph{True Positive Rate}, and
+ \emph{False Positive Rate} on both datasets augmented with semi-synthetic datasets which are obtained after imputation in order to deal with missing values.
+ 
+ Our main result is that RF, SVM  with Gaussian Kernel and ANN are promising and offer the best overall accuracy to predict the appearance or not of the disease with precision, recall and F1-score at least equal to 92\%, 85\% and 89\% respectively on both datasets. More specifically, those three learning approaches outperform the RDT which represents the baseline automatic diagnostic tool largely adopted as a standard within the Health system in Senegal.
+ 
+% paper organization
+The rest of the paper is structured as follows. We first review the literature of existing research works dealing with Malaria in Section \ref{literature}. In Section \ref{datasets}, we then provide a detailed description of our two real world datasets which contain medical records about patients living in Senegal. More precisely, we present the characteristics of each dataset, their imputation to deal with missing values and the precision values of RDT. In the sequel, we briefly describe in Section \ref{ml_algorithms}  the six ML algorithms that are evaluated and compared in this study. We present our experimentation setting, considered performance measures and discuss about the results of the experiments in Section \ref{experimentations}. Finally, we conclude this paper in Section \ref{conclusion}.
