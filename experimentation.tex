@@ -1,267 +1,252 @@
-\section{Experimentation and results}\label{experimentation}
-In this section, we present the performance of our prediction
- model for Malaria occurrecne through an analysis of the results
- of the experimentations we have conducted on real-world datasets
-and a semi-synthetic dataset. We start by presenting our experimentation setting.
- 
-% Experimentation setting
-\subsection{Experimentation setting}
-We ran tests on three different datasets using the Python Implementation of the logistic regression function.
-To impute missing data, we have used the R package of the algorithm missForest.
+\section{Experimentation and results}\label{experimentations}
+We detail and analyze in the section the results of the experimentation we performed using the six ML algorithms presented in Section \ref{ml_algorithms} over the two real datasets described in Section \ref{datasets}. We start by presenting our experimentation setting.
 
-% Our datasets
-\subsubsection{Our datasets.}
-We collected and used a real-world patient dataset from the different health points which were set during the Grand Magal of Touba in 2016.
-We also generated and used two variants of this real-world dataset. The description of the characteristics of our raw real-world dataset, as well as the  data preparation
-pipeline that we have proposed in order to clean, normalize and impute information, are given in Section \ref{data_prep}; we refer to this cleaned and complete real-world
-patient dataset by \textsc{DT1}. 
-
-We generated the first variant, denoted by \textsc{DT2}, of the raw real-world patient dataset by 
-removing records with missing attributes, instead of using an imputation algorithm that will predicts 
-values for missing information. Such a variant will help to study the impact of removing records with 
-missing values in the prediction accuracy.
- 
-The second variant, called \textsc{DT3}, is a semi-synthetic dataset which has been set up by using a 
-sampling strategy over our raw real-world dataset. Indeed when we have performed some explanatory analysis 
-on the real-world dataset have been revealed that the dataset was not balanced, i.e. it shows strong between
-class imbalance; the amount of records about patients suffering from Malaria was largely less than the number
-of patients that do not suffer from Malaria as shown in Figure \ref{records_class}. Harnessing sampling approaches may enbale to obtain a balanced 
-semi-dataset regarding the two classes to predict. To solve our problem of imbalanced dataset, we used the 
-algorithm SMOTE \cite{Wa06}, which is a synthetic minority oversampling technique, through its Python implementation
-in the  package \emph{imbalanced-learn} \cite{Gu17}. SMOTE consists of predicting a sample of synthetic dataset based on 
-the value of the minority class of the targeted class (here the attribute Diagnostic). It randomly chooses the k-nearest 
-neighbours of a given record in order to randomly create new observations.
- We have applied an over-sampling of the minority class into our patient 
-dataset for generating  a semi-synthetic dataset \textsc{DT3} containing the same number of records for both classes.  
-
-% distribution of records by class
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.6\textwidth]{images/imbalanced_dataset}
-\label{records_class}\caption{The number of records by class}
-\end{figure} 
-
-% Implementation of the logistic model
-\subsubsection{Prediction model setting.}
-In order to set up our logistic regression-based classification model, we rely on the Python implementation of the logistic regression in the \emph{sklearn} library\footnote{https://scikit-learn.org/stable/modules/generated/sklearn.linear\_model.LogisticRegression.html}.
-This python package defines the logistic regression with the required input parameters, as well as optimization strategies, to properly perform binary 
-classification using the best final model. For the purposes of our tests, we have used the following input parameters of the logistic regression:
-
-% input parameters
+% experimentation setting
+\subsection{Experimentation Setting}
+All the performed tests have been done in the same machine and the same operating system. To test the performance of our six chosen ML algorithms, 
+we relied on their Python implementations available through the scikit-learn library\footnote{https://scikit-learn.org/stable/}. Scikit-learn is an open source simple and efficient tool for predictive data analysis that implements
+most of the existing ML algorithms. We set the following  values for the various parameters of each algorithm.
 \begin{itemize}
-\item \textbf{random\_state}: it models the seed of the pseudo random number generator to use when shuffling the data. Its value
-is set to $0$ as we do not need to shuffle data in our experimentations.
-\item \textbf{class\_weight}: weights associated with classes. We set it to \emph{None}, i.e. all classes are supposed to have weight one.
-\item \textbf{dual}: dual or primal formulation. Dual formulation is only implemented for l2 penalty with liblinear solver.
-This parameter is set to \emph{False} as the number of samples is greater than the number of features.
-\item \textbf{fit\_intercept}: useful if a constant (a.k.a. bias or intercept) should be added to the decision function. Consequently,
-we fixed the fit\_intercept to \emph{True}.
-\item \textbf{intercept\_scaling}: this parameter, set to $1$, is useful only when the solver \textquote{liblinear} is used and fit\_intercept is set to True.
-\item \textbf{max\_iter}: maximum number of iterations taken for the solvers to converge.
-\item \textbf{multi\_class}: if the option chosen is \textquote{ovr}, then a binary problem is fit.
-\item \textbf{n\_jobs}: number of cpu cores used when parallelizing over classes if multi\_class=\textquote{ovr}. This parameter is ignored when the
-solver is  set to \textquote{liblinear} regardless whether \textquote{multiclass} is specified or not.
-\item \textbf{penalty}: this parameter is used to specify the norm in the pernalization. We fixed the penality to its default value $l2$.
-\item \textbf{solver}: it enables to specify the strategy used to solve the optimization underlying our model. For the solver we fix it 
-to \emph{liblinear}.
-\item \textbf{tol:} tolerance for stopping criteria which is set to $0.0001$.
-\item \textbf{verbose}: for the liblinear solver set verbose to any positive number for verbosity.
-\item \textbf{warm\_start}: when set to \emph{True}, reuse the solution of the previous call to fit as initialization, otherwise, just erase the
- previous solution. Useless for liblinear solver.
+    \item NB
+    \begin{itemize}
+        \item priors=None, var smoothing=1e-09.
+    \end{itemize}
+    \item LR
+    \begin{itemize}
+        \item C=1.0, class weight=None, dual=False, multi class='warn', fit intercept=True,
+intercept scaling=1, 
+l1 ratio=None, 
+max iter=1000,                  
+penalty='l2',                  
+random state=0, 
+solver='lbfgs', 
+verbose=0,                
+warm start=False,
+n jobs=None,
+tol=0.0001.
+    \end{itemize}
+    \item DT
+    \begin{itemize}
+        \item class weight=None, 
+criterion='gini', 
+max depth=None,                      
+max features=None, 
+max leaf nodes=None,
+min samples split=2,                       
+min weight fraction leaf=0.0, 
+presort=False,
+min impurity decrease=0.0, 
+min impurity split=None,
+min samples leaf=1.
+    \end{itemize}
+    \item RF
+    \begin{itemize}
+        \item  class weight=None1
+criterion='gini', 
+max depth=None,
+max features=None, 
+max leaf nodes=None,                      
+min impurity decrease=0.0, 
+min impurity split=None                       
+min samples leaf=1,
+in samples split=2,                      
+min weight fraction leaf=0.0,
+presort=False,
+random state=0, splitter='best'.
+    \end{itemize}
+    \item SVM
+        \begin{itemize}
+        \item C=1.0, 
+cache size=200,
+class weight=None, 
+coef0=0.0,
+decision function shape='ovr', 
+degree=3, 
+gamma='auto', 
+kernel='rbf',
+max iter=-1, 
+probability=True, 
+random state=None, 
+shrinking=True, 
+tol=0.001,
+verbose=False.
+
+    \end{itemize}
+    \item ANN
+    \begin{itemize}
+        \item activation='relu'
+alpha=0.0001,
+batch size='auto', 
+beta1=0.9,
+beta2=0.999, 
+early stopping=False, 
+epsilon=1e-08,
+hidden layer sizes=(15, 15, 15), 
+learning rate='constant',
+learning rate init=0.001,
+max iter=10000, momentum=0.9,
+numb iter no change=10, 
+nesterovs momentum=True,
+power t=0.5,
+random state=None,
+shuffle=True, 
+solver='adam', 
+tol=0.0001,
+validation fraction=0.1, 
+verbose=False,
+warm start=False.
+    \end{itemize}
+\end{itemize}
+For the details about the description of each parameter we refer to the official documentation of the implementation of these algorithms in scikit-learn\footnote{https://scikit-learn.org/stable/supervised\_learning.html\#supervised-learning}. Concerning the segmentation of both datasets for the 
+training of our ML algorithms and their testing we have considered the following splitting of the initial data.
+\begin{itemize}
+    \item DT1
+    \begin{itemize}
+        \item Training set : 70\%
+        \item Test set : 30\%
+    \end{itemize}
+    \item DT2
+    \begin{itemize}
+        \item Training set : 80\%
+        \item Test set : 20\%
+    \end{itemize}
 \end{itemize}
 
-As the logistic regression performs a supervised learning we have used 60\% for the training set and 30\% for the test set.
-
-% Performance measures
+% performance measures 
 \subsection{Performance measures}
-To evaluate the performance of our prediction approach over the different used datasets, we have computed the precision,
-recall (or sensitivity), F-measure, and specificity of the predicted classes. We have also drawn the graph of the Receiver operating 
-characteristic of the logistic regression to study its shape.  
-The sensitivity, specificity and ROC plot are often used in the medecine domain as performance measures for prediction tasks.
+To evaluate the performance of every classifier tested during this study, we leverage several different standard measures. We present next the definition of these performance measures.
 
-\subsubsection{Precision.}
-
-\label{precision} The precision $p$, or positive value rate, for a class is the number
- of true positives (i.e. the number of cases  correctly labeled as belonging to the class \textsc{M+})
- divided by the total number of cases labeled as belonging to the class \textsc{M+} (i.e. the sum of true positives 
+\textbf{Precision.} 
+The precision $p$, or positive value rate, for a class is the number
+ of true positives (i.e. the number of cases  correctly labeled as belonging to the positive class)
+ divided by the total number of cases labeled as belonging to the positive class (i.e. the sum of true positives 
 and false positives, which are cases  incorrectly labeled as belonging to the class).
 
-
-% precision formula
-\begin{equation}
-p=\frac{\sum_{i=1}^{|R|}Entity(i)}{R}.
-\end{equation}
-
-\textit{Entity(i)} is a binary function that returns true if the predicted class for the  \textit{i}-th case is correct (w.r.t test set) and false otherwise.
-$R$ is the sum of the number of predicted true positive and  false positive cases.
-
-\subsubsection{Recall.}
+\textbf{ Recall.}
 The recall $r$ (also known as sensitivity) is defined as the number of true positives divided by the total number of cases that actually belong
- to the clss \textsc{M+} (i.e. the sum of true positives and false negatives, which are cases which were not labeled as belonging to the class 
-\textsc{M+} but should have been).
+ to the positive class (i.e. the sum of true positives and false negatives, which are cases which were not labeled as belonging to the positive class but should have been).
 
-% Recall formula
-\begin{equation}
-r=\frac{\sum_{i=1}^{\mid R\mid}Entity(i)}{G}
-\label{recall}
-\end{equation}
 
-$G$ is the sum of the number of predicted true positive and false negative cases.
-
-\subsubsection{F-measure.} The F-measure, denoted by F$_1$, is a metric that measures the accuracy of a test in statistical analysis of a binary classification.
+\subsubsection*{\bf F-measure.} The F-measure, denoted by F$_1$, is a metric that measures the accuracy of a test in statistical analysis of a binary classification.
 It is computed using both the precision $p$ and the recall $r$ of the test as the ratio of the number of correct positive results and the
 number of all positive results returned by the classifier. 
 
-% F-measure formula
-\begin{equation}
-F_1 = 2 \times \frac{p\times r}{p + r}
-\label{f-measure}
-\end{equation}
- 
-\subsubsection{Specificity.} The specificity, also known as the true negative rate, measures the proportion of actual negatives that are correctly identified as such 
+
+\textbf{ Specificity.} 
+The specificity, also known as the true negative rate, measures the proportion of actual negatives that are correctly identified as such 
 (e.g., the percentage of people not suffering from Malaria  who are correctly identified as not having the condition).
 
-\subsubsection{Receiver operating characteristic.} A receiver operating characteristic, or ROC in short, is a graph
+\textbf{ Receiver operating characteristic.} A receiver operating characteristic, or ROC in short, is a graph
  that shows the diagnostic ability of a binary classifier system as its discrimination threshold is varied.
-The ROC curve is created by plotting the \emph{true positive rate} (i.e. sensitivity or recall in machine learning) 
-against the false positive rate (1 - specifity) at various threshold settings. 
+The ROC curve is created by plotting the \emph{true positive rate} (i.e. sensitivity or recall in Machine Learning) 
+against the false positive rate (1 - specificity) at various threshold settings. 
+The Area Under the Curve (AUC) of the ROC curve is a discrimination measure which tells us how well our predictor can classify patients in two groups: those with and those without the outcome of interest.
 
-% Analysis of the results
-\subsection{Experiments and analysis of the results}
-For each given dataset, we have performed two kinds of tests with our prediction model: a test without including the outcome of the quick diagnostic test
-or another with the result of the quick diagnostic test (or QDT for short) among the input features. We first describe below the obtained results for each dataset and
-then present a comparative analysis.
+% Results of the experiments
+\subsection{Results of the experiments}
+This section presents the results of the experimentation on each real dataset for each of the six classifiers. 
 
-\subsubsection{Experiments with DT1.}
-Table 2 and Figure 3 respectively show the performance measures and the ROC curve of the results of the our classification approach tested on dataset 
-DT1 that is our cleaned real-world dpatient with imputed missing values. The results on Table 2a) and Figure 3a) are obtained without considering the 
-quick diagni-ostic test output in contrast of measures in Table 2b) and Figure 3b). One can easily see that the accuracy of our prediction model is 
-sensibly the same when considering or not the QDT; this accuracy is quite good as proven by the precision which is greater than 90\%.  
 
-% results for precision, recall, F-measure
-\begin{table}[!h]
+\subsubsection*{\bf Experiments with DT1.}
+Table  \ref{perf-measure-dt1} and Figure \ref{curve_roc_dt1} respectively show the performance measures (Precision, Recall and F-measure) and the ROC curves of the results  of our six classifiers after experimentation on the  dataset DT1. Observation shows that all classifiers have the same precision 99\% but present different recall and F-measure (see Table \ref{perf-measure-dt1}). At the same time, we note that the surfaces under the ROC curves, i.e. the AUC (Area Under the Surface) values, of the different algorithms are clearly different with values between 0.50 and 0.87.
+\begin{table}[!ht]
 \centering
-\subtable[Prediction without the QDT outcome]{
-\begin{tabular}{ccc}
-\textbf{Precision} & \textbf{Recall} & \textbf{F-measure}\\
-\toprule
-$0.97$ & $1.0$ & $0.99$ \\
-\bottomrule
+\begin{tabular}{*{6}{c}l r}
+  \toprule
+  \textbf{ML algorithm} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
+   \midrule
+  NB &0.99& 0.17  & 0.29 \\
+  LR & 0.99 & 0.92  & 0.96\\
+  DT &0.99 & 0.17&0.29\\
+   RF &0.99 &0.98 &0.99\\
+    SVM(kernel=gaussian) &0.99 &0.98 &0.99\\
+    SVM(kernel=polynom) & 0.99&0.92&0.95\\
+    ANN(MLP)&0.99&0.99&0.99\\
+    \bottomrule
 \end{tabular}
-}%
-\hspace*{0.5cm}
-\subtable[Prediction with the QDT outcome]{
-\centering
-\begin{tabular}{ccc}
-\textbf{Precision} & \textbf{Recall} & \textbf{F-measure}\\
-\toprule
-$0.98$ & $1.0$ & $0.99$ \\
-\bottomrule\\
-\end{tabular}
-}%
-\label{perf-measure-dt1}\caption{Performance measures of the prediction on DT1}
+\caption{Precision, Recall and F1-score measures over DT1}\label{perf-measure-dt1}
 \end{table}
 
-% the roc curve
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
-\subfigure[Prediction without the QDT outcome]{
-\includegraphics[width=.4\textwidth]{images/curve_roc_dt1_1}
-}%
-\subfigure[Prediction with the QDT outcome]{
-\includegraphics[width=.47\textwidth]{images/curve_roc_dt1_2}
-}
-\caption{The curve of the Receiver Operating Characteristic for prediction on DT1}\label{curve_roc_dt1}
+\includegraphics[width=.5\textwidth]{ROCmg}
+\caption{True Positive Rate over False Positive Rate on DT1}\label{curve_roc_dt1}
 \end{figure}
 
+\subsubsection*{\bf Experiments with DT2.}
+Table \ref{perf-measure-dt2} and Figure \ref{curve_roc_dt2} respectively show the performance measures (Precision, Recall and F-measure) and the ROC curves of our six classifiers after experimentation on the dataset DT2. In contrast to the results obtained with DT1, we notice that our classifiers have overall precision which are slightly down and vary between 93\% and 96\% (see Table \ref{perf-measure-dt2}). Likewise ROC curves follow the same trends with AUC values between 0.50 and 0.70
 
-
-\subsubsection{Experiments with DT2.}
-Table 3 and Figure 4 respectively show the performance measures and the ROC curve of the results (with or without taking into account the QDT) 
-of the our classification approach tested on dataset DT2 that is our cleaned real-world patient with the deletion of records have missing data.
-The accuracy measures on Table 3a) et Figure 4) respectively compare to those in Table 3b) and Figure 4b) show that our classifier does well 
-when considering the QDT as a feature; without the QDT the precision of the prediction decreases a lot. 
-
-
-
-% results for precision, recall, F-measure
-\begin{table}[!h]
+\begin{table}[!ht]
 \centering
-\subtable[Prediction without the QDT outcome]{
-\begin{tabular}{ccc}
-\textbf{Precision} & \textbf{Recall} & \textbf{F-measure}\\
-\toprule
-$0.75$ & $1.0$ & $0.86$ \\
-\bottomrule\\
+\begin{tabular}{*{5}{c}l r}
+  \toprule
+  \textbf{ML algorithm} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
+   \midrule
+  NB &0.96& 0.05  & 0.10 \\
+  LR & 0.93& 0.62  & 0.75\\
+  DT &0.92 & 0.85&0.88\\
+   RF &0.92 &0.85&0.89\\
+    SVM(kernel=gaussian) &0.92 &0.86 &0.89\\
+    SVM(kernel=polynom) & 0.93&0.54&0.68\\
+    ANN(MLP)&0.93&0.85&0.89\\
+    \bottomrule
 \end{tabular}
-}%
-\hspace*{0.5cm}
-\subtable[Prediction with the QDT outcome]{
-\centering
-\begin{tabular}{ccc}
-\textbf{Precision} & \textbf{Recall} & \textbf{F-measure}\\
-\toprule
-$1.0$ & $1.0$ & $1.0$ \\
-\bottomrule
-\end{tabular}
-}%
-\label{perf-measure-dt2}\caption{Performance measures of the prediction on DT2}
+\caption{Precision, Recall and F1-score measures on DT2}\label{perf-measure-dt2}
 \end{table}
-
-% the roc curve
 \begin{figure}[!h]
 \centering
-\subfigure[Prediction without the QDT outcome]{
-\includegraphics[width=.42\textwidth]{images/curve_roc_dt2_1}
-}%
-\subfigure[Prediction with the QDT outcome]{
-\includegraphics[width=.4\textwidth]{images/curve_roc_dt2_2}
-}
-\caption{The curve of the Receiver Operating Characteristic for prediction on DT2}\label{curve_roc_dt2}
+%\subfigure[Prediction whith DT2]{
+\includegraphics[width=0.5\textwidth]{ROCdio}
+%}
+\caption{True Positive Rate over False Positive Rate on DT2}\label{curve_roc_dt2}
+\end{figure}
+\subsection{Analysis of the results and discussion}
+
+\begin{figure}[!ht]
+\begin{tikzpicture}
+\begin{axis}
+[
+xlabel = Tree depth,
+ylabel = Accuracy of DT (\%)
+]
+\addplot[mark=halfcircle, only marks] table [x=height, y=accu] {accu_tree_height.csv};
+\end{axis}
+\end{tikzpicture}
+\caption{Accuracy of DT  with respect to the tree depth}\label{accy_dt_tree_height}
+\end{figure}
+%
+%
+\begin{figure}[!ht]
+\begin{tikzpicture}
+\begin{axis}
+[
+xlabel = Number of estimators,
+ylabel = Accuracy of RF (\%)
+]
+\addplot[color=red, mark=halfcircle, only marks] table [x=nb_estimator, y=accu] {accu_estimators_rf.csv};
+\end{axis}
+\end{tikzpicture}
+\caption{Accuracy of RF  with respect to the number of used decision trees}\label{accu_RF_n_trees}
+\end{figure}
+%
+\begin{figure}[!ht]
+\begin{tikzpicture}
+\begin{axis}
+[
+xlabel = Number of hidden layers,
+ylabel = Accuracy of ANN (\%)
+]
+\addplot[color=blue, mark=halfcircle, only marks] table [x=nb_layers, y=accu] {accu_ann_hidden_layers.csv};
+\end{axis}
+\end{tikzpicture}
+\caption{Accuracy of ANN with respect to the number of hidden layers}\label{accu_ann_hidden_layers}
 \end{figure}
 
-\subsubsection{Experiments with DT3.}
-similarly to results on DT2, performance measures on DT3 show a better prediction accuracy (See Table 4 and Figure 5) when the QDT is considered as a feature.  
+Analyzing in details the performance of our six classifiers on both datasets, the results of the previous section clearly argue in favor of the classifiers RF, LR, SVM with Gaussian kernel and ANN. Indeed considering the datase DT1, that contains observations about patients living in different areas in Senegal, these four classifiers have a precision of 99\%, a recall above 92\% and a F-measure above 95\%. We note the same trend with the dataset DT2 which contains observations about patients living in the same area in Senegal.  So in terms of precision, recall and F-measure those four classifiers outperform the rest. We can also remark that RF, LR, SVM with Gaussian kernel, and ANN present better precision than the systematically performed and used Rapid Diagnostic Test within the majority of health structures in Senegal.
+The difference of performance of our classifiers on the two datasets  can be explained by the fact that climatic factors such as temperature and standing water are very determining in the appearance or not of Malaria in distinct areas in Senegal as they favor the development of mosquitoes responsible for the disease.
 
-% results for precision, recall, F-measure
-\begin{table}[!h]
-\centering
-\subtable[Prediction without the QDT outcome]{
-\begin{tabular}{ccc}
-\textbf{Precision} & \textbf{Recall} & \textbf{F-measure}\\
-\toprule
-$0.77$ & $0.82$ & $0.79$ \\
-\bottomrule\\
-\end{tabular}
-}%
-\hspace*{0.5cm}
-\subtable[Prediction with the QDT outcome]{
-\centering
-\begin{tabular}{ccc}
-\textbf{Precision} & \textbf{Recall} & \textbf{F-measure}\\
-\toprule
-$0.87$ & $0.90$ & $0.89$ \\
-\bottomrule
-\end{tabular}
-}%
-\label{perf-measure-dt3}\caption{Performance measures of the prediction on DT3}
-\end{table}
+When we now restrict ourselves to the ROC curves, we observe that SVM with Gaussian kernel and Naive Bayes present the worst positive prediction rate as they have the lowest AUC values compared to the other classifiers.
 
-% the roc curve
-\begin{figure}[!h]
-\centering
-\subfigure[Prediction without the QDT outcome]{
-\includegraphics[width=.42\textwidth]{images/curve_roc_dt3_1}
-}%
-\subfigure[Prediction with the QDT outcome]{
-\includegraphics[width=.4\textwidth]{images/curve_roc_dt3_2}
-}
-\caption{The curve of the Receiver Operating Characteristic for prediction on DT3}\label{curve_roc_dt3}
-\end{figure}
+In addition we have tried to study the impact of the tree depth, the number of hidden layers and the number of estimators for DT, ANN and RF respectively. While the increase of the tree depth decreases the accuracy of DT (see Figure  \ref{accy_dt_tree_height}), the highest accuracy of RF corresponds to the use of 50 estimators as shown in Figure \ref{accu_RF_n_trees}. Furthermore, Figure \ref{accu_ann_hidden_layers} shows that when the number of hidden layers increases the accuracy of ANN does so in general.
+To conclude, we can argue that ANN seems to be the most promising classification approach among the six studied ML algorithms when we are only interested by the precision, recall and F-measure. If we include the ROC curves in the analysis ANN remains the most efficient approach.
 
-\subsubsection{Comparative analysis of the results.}
-In sum, the first experimentations detailed above prove that our logistic regression based prediction model does well in general and in particular when the outcome 
-of the quick diagnostic test is considered as a feature for the learning process. More specifically, the precision of our prediction is greater than 90\% for datasets DT1 and DT2,
-reaching 100\% for DT1. For the specific case of the real-world patient dataset with missing data filled using an imputation algorithm this accuracy does not decrease even though the QDT
-is not considered during the prediction process, and only the Malaria features, i.e. signs and symptoms are taken into account. As a result, we can conlcude that there is a hope to 
-construct an efficient prediction model for Malaria without the need to perform the quick diagnostic test in order to declare a given patent he is affected by the disease. 
