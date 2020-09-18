@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.16)  16 SEP 2020 19:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.16)  18 SEP 2020 12:50
 entering extended mode
 **./main.tex
 (main.tex
@@ -1203,64 +1203,9 @@ LaTeX Warning: Citation `mbaye2019towards' on page 6 undefined on input line 38
 LaTeX Warning: Citation `mbaye2019towards' on page 6 undefined on input line 39
 .
 
-[6]) (experimentation.tex [7 <./missing_values.png>]
-Overfull \hbox (7.07297pt too wide) in paragraph at lines 16--27
-\OT1/ptm/m/n/10 in-ter-cept scal-ing=1, l1 ra-tio=None, max iter=1000, penalty=
-'l2', ran-dom state=0,
- []
-
-
-Overfull \hbox (27.55347pt too wide) in paragraph at lines 59--73
-[]\OT1/ptm/m/n/10 C=1.0, cache size=200, class weight=None, coef0=0.0, de-ci-si
-on func-tion shape='ovr',
- []
-
-
-Overfull \hbox (5.6834pt too wide) in paragraph at lines 77--98
-[]\OT1/ptm/m/n/10 activation='relu' al-pha=0.0001, batch size='auto', beta1=0.9
-, beta2=0.999, early
- []
-
-
-Overfull \hbox (37.76299pt too wide) in paragraph at lines 77--98
-\OT1/ptm/m/n/10 stop-ping=False, epsilon=1e-08, hid-den layer sizes=(15, 15, 15
-), learn-ing rate='constant',
- []
-
-
-Overfull \hbox (18.1737pt too wide) in paragraph at lines 77--98
-\OT1/ptm/m/n/10 learn-ing rate init=0.001, max iter=10000, mo-men-tum=0.9, numb
- iter no change=10,
- []
-
-
-Overfull \hbox (25.75293pt too wide) in paragraph at lines 77--98
-\OT1/ptm/m/n/10 solver='adam', tol=0.0001, val-i-da-tion frac-tion=0.1, ver-bos
-e=False, warm start=False. 
- []
-
-[8]
-<ROCmg.png, id=92, 578.16pt x 289.08pt>
-File: ROCmg.png Graphic file (type png)
-<use ROCmg.png>
-Package pdftex.def Info: ROCmg.png  used on input line 172.
-(pdftex.def)             Requested size: 173.56177pt x 86.77759pt.
- [9]
-<ROCdio.png, id=106, 578.16pt x 289.08pt>
-File: ROCdio.png Graphic file (type png)
-<use ROCdio.png>
-Package pdftex.def Info: ROCdio.png  used on input line 199.
-(pdftex.def)             Requested size: 173.56177pt x 86.77759pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-PGFPlots: reading {accu_tree_height.csv}
-PGFPlots: reading {accu_estimators_rf.csv}
-PGFPlots: reading {accu_ann_hidden_layers.csv}
-[10 <./ROCmg.png>] [11 <./ROCdio.png>]) (conclusion.tex [12])
+[6]) (experimentation.tex [7 <./missing_values.png>]) (conclusion.tex)
 No file main.bbl.
-[13]
+[8]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 105.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
  (main.aux)
@@ -1275,24 +1220,22 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 105.
  ) 
 Here is how much of TeX's memory you used:
- 28213 strings out of 480790
- 684735 string characters out of 2897770
- 1100016 words of memory out of 3000000
- 43650 multiletter control sequences out of 15000+200000
- 567816 words of font info for 89 fonts, out of 3000000 for 9000
+ 27699 strings out of 480790
+ 670493 string characters out of 2897770
+ 1090016 words of memory out of 3000000
+ 43171 multiletter control sequences out of 15000+200000
+ 563828 words of font info for 79 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,11n,98p,1374b,1911s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,11n,98p,1374b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/
-Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.
-pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmtt9.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw
-/times/utmb8a.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/
-times/utmr8a.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/t
-imes/utmri8a.pfb>
-Output written on main.pdf (13 pages, 1259722 bytes).
+Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.p
+fb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pf
+b><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb
+><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb
+>
+Output written on main.pdf (8 pages, 128876 bytes).
 PDF statistics:
- 171 PDF objects out of 1000 (max. 8388607)
- 48 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 109 PDF objects out of 1000 (max. 8388607)
+ 30 named destinations out of 1000 (max. 500000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
