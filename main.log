@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.16)  22 SEP 2020 00:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.16)  22 SEP 2020 12:02
 entering extended mode
 **./main.tex
 (main.tex
@@ -1235,9 +1235,9 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 105.
  ) 
 Here is how much of TeX's memory you used:
- 27702 strings out of 480790
- 670460 string characters out of 2897770
- 1090014 words of memory out of 3000000
+ 27705 strings out of 480790
+ 670490 string characters out of 2897770
+ 1092016 words of memory out of 3000000
  43165 multiletter control sequences out of 15000+200000
  563828 words of font info for 79 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1248,9 +1248,9 @@ fb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pf
 b><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb
 ><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on main.pdf (10 pages, 134027 bytes).
+Output written on main.pdf (10 pages, 135287 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
- 39 named destinations out of 1000 (max. 500000)
+ 131 PDF objects out of 1000 (max. 8388607)
+ 42 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
