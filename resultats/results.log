@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.16)  22 SEP 2020 00:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.16)  22 SEP 2020 14:08
 entering extended mode
 **./results.tex
 (results.tex
@@ -798,7 +798,23 @@ ode.def
 File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count307
 \l__pdf_internal_box=\box59
-) (results.aux)
+) (results.aux
+
+LaTeX Warning: Label `perf-measure-dt1' multiply defined.
+
+
+LaTeX Warning: Label `perf-measure-dt1' multiply defined.
+
+
+LaTeX Warning: Label `perf-measure-dt1' multiply defined.
+
+
+LaTeX Warning: Label `perf-measure-dt1' multiply defined.
+
+
+LaTeX Warning: Label `perf-measure-dt1' multiply defined.
+
+)
 \openout1 = `results.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
@@ -819,8 +835,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 2
 2.
-
-(C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
+ (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 \AtBeginShipoutBox=\box60
@@ -913,22 +928,22 @@ Package rerunfilecheck Info: File `results.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 155.
  ) 
 Here is how much of TeX's memory you used:
  27247 strings out of 480790
  665143 string characters out of 2897770
- 1077415 words of memory out of 3000000
+ 1077417 words of memory out of 3000000
  42772 multiletter control sequences out of 15000+200000
  543160 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,8n,98p,1148b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,8n,98p,1156b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/
 Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/U
 sers/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on results.pdf (2 pages, 34650 bytes).
+Output written on results.pdf (2 pages, 34636 bytes).
 PDF statistics:
  35 PDF objects out of 1000 (max. 8388607)
  9 named destinations out of 1000 (max. 500000)

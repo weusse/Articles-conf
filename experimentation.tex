@@ -21,15 +21,15 @@ Table 1  below shows the performance measures (precision, recall, F measure and 
 % Decision Tree
 \begin{table}[!ht]
 \centering
-\begin{tabular}{*{6}{c}l r}
+\begin{tabular}{*{7}{c}l r}
   \toprule
-  \textbf{Datasets} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score}&\textbf{AUC} &\textbf{Score}\\
+  \textbf{Datasets} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score}&\textbf{AUC} &\textbf{Score}&\textbf{Specificity}\\
    \midrule
-  DT1 &0.97 & 1  & 0.98& 0.78&97.04 \\
-  DT2 & 0.59 &0.48&0.48&0.64&63.01 \\
-  DT3 &0.89 &0.85 &0.87&0.86&80.86\\
-  DT4 &0.68 &0.57&0.62&0.70&65.60\\
-  DT5 &0.99 &0.84&0.91&0.76&83.41\\
+  DT1 &0.97  & 1   & 0.98 & 0.78 & 97.04 & 0.05 \\
+  DT2 & 0.59 &0.48 &0.48  &0.64  &63.01  &0.80\\
+  DT3 &0.89  &0.85 &0.87  &0.86  &80.86  &0.69\\
+  DT4 &0.68  &0.57 &0.62  &0.70  &65.60  &0.74\\
+  DT5 &0.99  &0.84 &0.91  &0.76  &83.41  &0.58\\
 
   
     \bottomrule
@@ -41,15 +41,15 @@ The performance of the random forest varied throughout the study depending on th
 %Random Forest
 \begin{table}[!ht]
 \centering
-\begin{tabular}{*{6}{c}l r}
+\begin{tabular}{*{7}{c}l r}
   \toprule
-  \textbf{Datasets} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score}&\textbf{AUC} &\textbf{Score}\\
+  \textbf{Datasets} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score}&\textbf{AUC} &\textbf{Score} &\textbf{Specificity}\\
    \midrule
-  DT1 &0.97 &1   &0.99 &0.81 &97.13 \\
-  DT2 &0.63  & 0.34  &0.44&0.64&63.33 \\
-  DT3 &0.89 &0.85 &0.87&087&80.86\\
-  DT4 &0.68 &0.56&0.62&0.70&65.82\\
-  DT5 &0.99 &0.84&0.91&0.76&78.35\\
+  DT1 &0.97 &1   &0.99 &0.81 &97.13& 0.07\\
+  DT2 &0.63  & 0.34  &0.44&0.64&63.33& 0.85\\
+  DT3 &0.89 &0.85 &0.87&087&80.86&0.70\\
+  DT4 &0.68 &0.56&0.62&0.70&65.82&0.74\\
+  DT5 &0.99 &0.84&0.91&0.76&78.35&0.60\\
   
   
     \bottomrule
@@ -65,15 +65,15 @@ Logistic regression In table 3 we show the performance measures LR classifier ex
 
 \begin{table}[!ht]
 \centering
-\begin{tabular}{*{6}{c}l r}
+\begin{tabular}{*{7}{c}l r}
   \toprule
-  \textbf{Datasets} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score}&\textbf{AUC} &\textbf{Score}\\
+  \textbf{Datasets} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score}&\textbf{AUC} &\textbf{Score}&\textbf{Specificity}\\
    \midrule
-  DT1 &0.97 &1   &0.99 &0.79 &97.19 \\
-  DT2 & 0.58 &0.36   &0.44&0.63&61.96\\
-  DT3 &0.85 &0.88 &0.86&0.86&79.59\\
-  DT4 &0.98 &0.56&0.92&0.70&65.82\\
-  DT5 & 0.90&0.78&0.88&0.84&81.86\\
+  DT1 &0.97 &1   &0.99 &0.79 &97.19&0.05 \\
+  DT2 & 0.58 &0.36   &0.44&0.63&61.96&0.81\\
+  DT3 &0.85 &0.88 &0.86&0.86&79.59&0.55\\
+  DT4 &0.98 &0.56&0.92&0.70&65.82&0.72\\
+  DT5 & 0.90&0.78&0.88&0.84&81.86&0.75\\
   
   
     \bottomrule
@@ -82,63 +82,61 @@ Logistic regression In table 3 we show the performance measures LR classifier ex
 \end{table}
 We observe that the higher precision is obtained with DT4 dataset while the corresponding score is equal to 65.82\% is the lowest of all other datasets. Also we notice that the LR presents homogeneous results on the DT3 dataset with an accuracy of 85\%, a sensitivity equal to 88\%, an F-score of 92\%, an AUC which is 0.86 and a score equal to 79.59\%. . We also note that the best AUC and the best F-score are obtained by LR on the DT3 dataset.
 \subsubsection{Naives Bayes}
-In contrast with the results above, NB classifier presents very heterogeneous performances regarding the performance measures used. In fact, we observe that the best precision is achieved on the dataset DT5 which is 99\%, although the best F-score and the higher accuracy are obtained on the dataset DT1 which are 0.99 and 97.13\% respectively and finally the best AUC is observed on the dataset DT3 which is 0.85. We also note that the best specificity is obtained on DT4 and varies between 0.65 and 0.70 (see appendices).
+In contrast with the results above, NB classifier presents very heterogeneous performances regarding the performance measures used as shown in Table 4. In fact, we observe that the best precision is achieved on the dataset DT5 which is 99\%, although the best F-score and the higher accuracy are obtained on the dataset DT1 which are 0.99 and 97.13\% respectively and finally the best AUC is observed on the dataset DT3 which is 0.85. We also note that the best specificity is obtained on DT4 and varies between 0.65 and 0.70 (see appendices).
 \begin{table}[!ht]
 \centering
-\begin{tabular}{*{6}{c}l r}
+\begin{tabular}{*{7}{c}l r}
   \toprule
-  \textbf{Datasets} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score}&\textbf{AUC} &\textbf{Score}\\
+  \textbf{Datasets} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score}&\textbf{AUC} &\textbf{Score}&\textbf{Specificity}\\
    \midrule
-  DT1 &0.97 &1   &0.99 &0.81 &97.13 \\
-  DT2 & 0.60 &0.34   &0.43&0.63&62.86 \\
-  DT3 &0.86 &0.87 &0.86&0.85&79.94\\
-  DT4 &0.68 &0.59&0.63&0.70&65.63\\
-  DT5 &0.99 &0.82&0.90&0.84&85.61\\
+  DT1 &0.97 &1   &0.99 &0.81 &97.13 &0.00\\
+  DT2 & 0.60 &0.34   &0.43&0.63&62.86&0.83 \\
+  DT3 &0.86 &0.87 &0.86&0.85&79.94&0.60\\
+  DT4 &0.68 &0.59&0.63&0.70&65.63&0.73\\
+  DT5 &0.99 &0.82&0.90&0.84&85.61&0.71\\
   
   
     \bottomrule
 \end{tabular}
 \caption{Performances measures of NB over all datasets}\label{perf-measure-dt1}
 \end{table}
-
+\subsubsection{Support Vector Machine}
 %SVM
-\begin{center}
-\textbf{SVM}
 
-\end{center}
+Table 5 shows the performance measures of the SVM classifier.
 \begin{table}[!ht]
 \centering
-\begin{tabular}{*{6}{c}l r}
+\begin{tabular}{*{7}{c}l r}
   \toprule
-  \textbf{Datasets} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score}&\textbf{AUC} &\textbf{Score}\\
+  \textbf{Datasets} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score}&\textbf{AUC} &\textbf{Score}&\textbf{Specificity}\\
    \midrule
-  DT1 &0.97 &1   &0.99 &.52 &97.13 \\
-  DT2 &0.58  &0.05   & 0.09&0.62&62.86\\
-  DT3 &0.57 & 0.86&0.86&0.85&79.94\\
-  DT4 & 0.68&0.58&0.62&0.69&65.63\\
-  DT5 &0.99 &0.86&0.92&0.80&85.61\\
+  DT1 &0.97 &1   &0.99 &0.84 &97.13&0.00 \\
+  DT2 &0.58  &0.05   & 0.09&0.62&62.86&0.97\\
+  DT3 &0.57 & 0.86&0.86&0.85&79.94&0.64\\
+  DT4 & 0.68&0.58&0.62&0.70&65.63&0.73\\
+  DT5 &0.99 &0.86&0.92&0.80&85.61&0.62\\
     \bottomrule
 \end{tabular}
 \caption{Performances measures of SVM over all datasets}\label{perf-measure-dt1}
 \end{table}
+Table 1 shows the performance measures. The observation shows that the best score, precision and F1-score are obtained on the datasets DT1, DT3 and DT5. However the higher AUC and the best specificity are observer on the datasets DT1, DT3 and DT4.
 %ANN
-\begin{center}
-\textbf{ANN}
-\end{center}
+\subsubsection{Artificial Neural Nework}
+The performance of the ANN varied throughout the study depending on the dataset, although overall it performed well. A large amount of initial effort was required to train and validate the model. Notice that best precision are achieved by ANN classifier on the datasets DT1, DT3 and DT5 which are respectively 97\%, 89\% and 99\%. While the higher AUC and the best scores are obtained on the datasets DT1 and DT3. The Sensivity values are higher than specificity values on datasets 
 \begin{table}[!ht]
 \centering
-\begin{tabular}{*{6}{c}l r}
+\begin{tabular}{*{8}{c}l r}
   \toprule
-  \textbf{Datasets} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score}&\textbf{AUC} &\textbf{Score}\\
+  \textbf{Datasets} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score}&\textbf{AUC} &\textbf{Score}&\textbf{Specificity}\\
    \midrule
-  DT1 0.97&1 &0.99   &0.84 &97.15  \\
-  DT2 &0.59  &0.40   &0.48&0.65&62.86 \\
-  DT3 &0.89 &0.85 &0.87&0.87&86.68\\
-  DT4 &0.68 &0.58&0.62&0.70&0.70\\
-  DT5 &0.99 &0.84&0.91&0.79&83.26\\ 
+  DT1 &0.97&1 &0.99   &0.84 &97.15&0.04  \\
+  DT2 &0.59  &0.40   &0.48&0.65&62.86&0.80 \\
+  DT3 &0.89 &0.85 &0.87&0.87&86.68&0.69\\
+  DT4 &0.68 &0.58&0.62&0.70&0.70&0.75\\
+  DT5 &0.99 &0.84&0.91&0.79&83.26&0.65\\ 
     \bottomrule
 \end{tabular}
 \caption{Performances measures of ANN over all datasets}\label{perf-measure-dt1}
 \end{table}
 
-\subsubsection*{\bf Experiments with DT1.}
+
