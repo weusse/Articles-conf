@@ -1,23 +1,31 @@
-\section{Experimentation and results}\label{experimentations}
-We detail and analyze in the section the results of the experimentation we performed using the six ML algorithms presented in Section \ref{ml_algorithms} over the two real datasets described in Section \ref{datasets}. We start by presenting our experimentation setting.
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.20 of 2017/10/04
+%
+%\documentclass[runningheads]{llncs}
+%
+\documentclass[10pt,a4paper]{article}
+\usepackage{hyperref}
+\renewcommand\UrlFont{\color{blue}\rmfamily}
+\setlength{\parskip}{0pt}
+\raggedbottom
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{csquotes}
+\usepackage{paralist}
+\usepackage{booktabs}
+\usepackage{mathptmx}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+\usepackage{subfigure}
 
-% experimentation setting
-\subsection{Experimentation Setting}
-In this section data is available for applying classification algorithm. After model creation from training data, classification operation is performed on test data. 
-All the performed tests have been done in the same machine and the same operating system. To test the performance of our six chosen ML algorithms, we relied on their Python implementations available through the scikit-learn library. Scikit-learn is an open source simple and efficient tool for predictive data analysis that implements most of the existing ML algorithms
-
-Then some of the most important performance evaluation measures like accuracy, precision, sensitivity, specificity, F-measure and area under ROC curve are evaluated and compared. 
-For the details about the description of each parameter of ML we refer to the official documentation of the implementation of these algorithms in scikit-learn7. Concerning the segmentation of both datasets for the training of our ML algorithms and their testing we have considered the stratified-5-fold cross-validation in classification model construction and efficiency evaluation. This method is very useful to handle data with an unbalanced class distribution, increases the validation of classification and prevents from random and invalid results.
-
-
-% Results of the experiments
-\subsection{Results of the experiments}
-
-This section presents the results of the experimentation on each real dataset for each of the six classifiers. 
-\subsubsection{Decision Tree}
+\begin{document}
 Table 1  below shows the performance measures (precision, recall, F measure and precision) of the results of our Decision Tree classifier after experimentation on all our datasets. The observation shows that the best scores of our classifier are achieved on the datasets DT1, DT3 and DT5 which are 7.04\%, 80.86\% and 83.41\% respectively. Noticing that sensitivity values are higher than specificity values for Also AUC (Area Under the Curve) values are higher for these same datasets which are 0.78, 0.86 and 0.76 respectively. However, we note that the sensitivity values are higher than the specificity values on the datasets DT1 and DT5 so that they are substantially identical for the datasets DT2, DT3 and DT4. This means that DT is more inclined to predict as well whether a given patient has malaria or he doesn’t, on the datasets DT2, DT3 and DT4, while our classifier on the datasets DT1 and DT5 our classifier is only efficient in predicting whether a given patient has malaria. This same trend is observed on the F-scores which higher values varying between 0.91 and 0.98 on the datasets DT1, DT3 and DT5.
-
 % Decision Tree
+\begin{center}
+\textbf{Decision Tree}
+\end{center}
+
 \begin{table}[!ht]
 \centering
 \begin{tabular}{*{6}{c}l r}
@@ -144,4 +152,4 @@ Table 1  below shows the performance measures (precision, recall, F measure and 
 \caption{Performances measures of ANN over all datasets}\label{perf-measure-dt1}
 \end{table}
 
-\subsubsection*{\bf Experiments with DT1.}
+\end{document}
