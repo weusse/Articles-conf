@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.16)  24 SEP 2020 10:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.16)  24 SEP 2020 11:28
 entering extended mode
 **./main.tex
 (main.tex
@@ -923,7 +923,23 @@ ode.def
 File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count337
 \l__pdf_internal_box=\box107
-) (main.aux)
+) (main.aux
+
+LaTeX Warning: Label `perf-measure-dt1' multiply defined.
+
+
+LaTeX Warning: Label `perf-measure-dt1' multiply defined.
+
+
+LaTeX Warning: Label `perf-measure-dt1' multiply defined.
+
+
+LaTeX Warning: Label `perf-measure-dt1' multiply defined.
+
+
+LaTeX Warning: Label `perf-measure-dt1' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
@@ -944,8 +960,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 2
 2.
-
-(C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
+ (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
@@ -1054,14 +1069,8 @@ LaTeX Warning: Citation `Hu17' on page 1 undefined on input line 7.
 LaTeX Warning: Citation `Hu17' on page 1 undefined on input line 9.
 
 
-LaTeX Warning: Reference `datasets' on page 1 undefined on input line 9.
-
-
 LaTeX Warning: Citation `ermert2011development' on page 1 undefined on input li
 ne 10.
-
-
-LaTeX Warning: Reference `literature' on page 1 undefined on input line 10.
 
 [1
 
@@ -1107,24 +1116,7 @@ LaTeX Warning: Citation `Be01' on page 2 undefined on input line 16.
 
 LaTeX Warning: Citation `Me19' on page 2 undefined on input line 17.
 
-[2]
-
-LaTeX Warning: Reference `literature' on page 3 undefined on input line 23.
-
-
-LaTeX Warning: Reference `datasets' on page 3 undefined on input line 23.
-
-
-LaTeX Warning: Reference `ml_algorithms' on page 3 undefined on input line 23.
-
-
-LaTeX Warning: Reference `experimentations' on page 3 undefined on input line 2
-3.
-
-
-LaTeX Warning: Reference `conclusion' on page 3 undefined on input line 23.
-
-) (Algorithme.tex
+[2]) (Algorithme.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -1211,19 +1203,13 @@ e 6.
 
 LaTeX Warning: Citation `Ch17' on page 5 undefined on input line 4.
 
-
-LaTeX Warning: Reference `raw_data' on page 5 undefined on input line 6.
-
 [5]
-
-LaTeX Warning: Reference `missing_values' on page 6 undefined on input line 10.
-
-
-<missing_values.png, id=47, 914.66719pt x 481.8pt>
+<missing_values.png, id=59, 914.66719pt x 481.8pt>
 File: missing_values.png Graphic file (type png)
 <use missing_values.png>
 Package pdftex.def Info: missing_values.png  used on input line 31.
 (pdftex.def)             Requested size: 277.69987pt x 146.2761pt.
+
 
 LaTeX Warning: Citation `mbaye2019towards' on page 6 undefined on input line 38
 .
@@ -1232,39 +1218,26 @@ LaTeX Warning: Citation `mbaye2019towards' on page 6 undefined on input line 38
 LaTeX Warning: Citation `mbaye2019towards' on page 6 undefined on input line 39
 .
 
-
-LaTeX Warning: Reference `synthetic_data' on page 6 undefined on input line 39.
-
-
-[6]) (experimentation.tex
-
-LaTeX Warning: Reference `ml_algorithms' on page 7 undefined on input line 2.
-
-
-LaTeX Warning: Reference `datasets' on page 7 undefined on input line 2.
-
-[7 <./missing_values.png>] [8] [9] [10]) (conclusion.tex)
+[6]) (experimentation.tex [7 <./missing_values.png>] [8] [9] [10])
+(conclusion.tex) [11]
 No file main.bbl.
-[11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 105.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
+[12]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 106.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 106.
  (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 105.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 105.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 106.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 106.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 2F2D75403C2E73651C8E1507C39481AC;143.
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 105.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 106.
  ) 
 Here is how much of TeX's memory you used:
- 27708 strings out of 480790
- 670524 string characters out of 2897770
+ 27709 strings out of 480790
+ 670531 string characters out of 2897770
  1091016 words of memory out of 3000000
  43165 multiletter control sequences out of 15000+200000
  563828 words of font info for 79 fonts, out of 3000000 for 9000
@@ -1276,9 +1249,9 @@ fb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pf
 b><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb
 ><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on main.pdf (11 pages, 137805 bytes).
+Output written on main.pdf (12 pages, 141203 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
- 45 named destinations out of 1000 (max. 500000)
+ 142 PDF objects out of 1000 (max. 8388607)
+ 46 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
