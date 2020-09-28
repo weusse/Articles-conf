@@ -18,7 +18,12 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.8}
 \usepackage{subfigure}
-
+\usepackage{pgfplots}
+\pgfplotsset{width=7cm,compat=1.8}
+\usepackage{pgfplotstable}
+\renewcommand*{\familydefault}{\sfdefault}
+\usepackage{tikz}
+%\pgfplotset{compact=1.16 }
 \begin{document}
 Table 1  below shows the performance measures (precision, recall, F measure and precision) of the results of our Decision Tree classifier after experimentation on all our datasets. The observation shows that the best scores of our classifier are achieved on the datasets DT1, DT3 and DT5 which are 97.04\%, 80.86\% and 83.41\% respectively. Noticing that sensitivity values are higher than specificity values for Also AUC (Area Under the Curve) values are higher for these same datasets which are 0.78, 0.86 and 0.76 respectively. However, we note that the sensitivity values are higher than the specificity values on the datasets DT1 and DT5 so that they are substantially identical for the datasets DT2, DT3 and DT4. This means that DT is more inclined to predict as well whether a given patient has malaria or he doesn’t, on the datasets DT2, DT3 and DT4, while our classifier on the datasets DT1 and DT5 our classifier is only efficient in predicting whether a given patient has malaria. This same trend is observed on the F-scores which higher values varying between 0.91 and 0.98 on the datasets DT1, DT3 and DT5.
 % Decision Tree
@@ -151,5 +156,32 @@ Table 1  below shows the performance measures (precision, recall, F measure and 
 \end{tabular}
 \caption{Performances measures of ANN over all datasets}\label{perf-measure-dt1}
 \end{table}
-
+\begin{table}
+\begin{tikzpicture}
+ \centering
+\begin{axis}[
+    height=8cm, width=15.5cm,
+    bar width=0.4cm,
+    ybar,
+    %ybar=5pt,% configures `bar shift'
+    bar width=9pt,
+    enlargelimits=0.15,
+    legend style={at={(0.5,-0.15)},
+      anchor=north,legend columns=-1},
+    ylabel={\#AUC},
+    symbolic x coords={{DT,RF,LR,NB,SVM,ANN}},
+    xtick=data,
+    %nodes near coords,
+    nodes near coords align={vertical},
+    ]
+\addplot coordinates {(DT,0.78) (RF, 0.81) (LR,0.79)(NB, 0.81)(SVM,0.84)(ANN, 0.54)};
+\addplot coordinates{(DT,0.64) (RF, 0.64) (LR,0.63)(NB, 0.63)(SVM,0.62)(ANN, 0.65)};
+\addplot coordinates {(DT,0.86) (RF, 0.87) (LR,0.86)(NB, 0.85)(SVM,0.85)(ANN, 0.87)};
+\addplot coordinates {(DT,0.70) (RF, 0.69) (LR,0.70)(NB, 0.69)(SVM,0.70)(ANN, 0.70)};
+\addplot coordinates {(DT,0.76) (RF, 0.76) (LR,0.84)(NB, 0.84)(SVM,0.80)(ANN, 0.79)};
+\legend{DT1,DT2,DT3,DT4,DT5}
+\end{axis}
+\end{tikzpicture}
+\caption{Performances measures of ANN over all datasets}\label{perf-measure-dt1}
+\end{table}
 \end{document}
