@@ -143,7 +143,7 @@ The performance of the ANN varied throughout the study depending on the dataset,
 In this study, the algorithms DT, RF, LR, NB, SVM and ANN were applied on five datasets concerning patients with or without malaria and living in regions of Senegal namely: Diourbel, Thies and Fatick. Indeed, in order to offer a new technique for diagnosing and predicting malaria, it is important to know the performance of those existing through our datasets.
 Analysing in details the performance of our six classifiers across the five datasets, the results show that there is not necessarily a single best classification algorithm, but that the best performing algorithm will depend on the characteristics of the dataset to analyze. Indeed we notice that all the algorithms produce their best precision on the DT1, DT3, and DT5 data sets. These values, which reach 97\% at times, outperform the Rapid Diagnosis Test which is the standard diagnostic tool largely adopted in the healthcare system in Senegal.
 \begin{figure}
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=0.8]
  \centering
 \begin{axis}[
     height=8cm, width=15.5cm,
@@ -168,12 +168,12 @@ Analysing in details the performance of our six classifiers across the five data
 \legend{DT1,DT2,DT3,DT4,DT5}
 \end{axis}
 \end{tikzpicture}
-\caption{comparison of Roc Area achieved by six classifiers}
+\caption{Comparison of the ROC Curves of the classifiers on differents datasets}
 \end{figure}
 However, on these same datasets, the algorithms often present very low specificities, for example 0.05 on DT1. This shows that our best performing classifiers are only able to predict a single class: either the patient has malaria or he does not, but not in both spots. This is because the DT1 and DT3 datasets are very unbalanced. In fact in these datasets either the number of patients with malaria is greater than those who are not or the opposite is true. Furthermore, we note that on the DT2 and DT4 datasets all the algorithms present specificities and Sensivity that are significant and quite similar. Contrary to what is quoted a little above, on these datasets the algorithms are efficient on the prediction tasks of the two classes. Looking closely at the results in terms of precision, recall and F-measure we observe that the classifiers RF, LR, SVM and ANN generally outperform the others for each dataset. Indeed, for the dataset DT1, which contains observations on patients living in different regions of Senegal, these four classifiers have an accuracy of 99\%, a recall greater than 92\% and an F-measure greater than 95\%. We note the same trend with the DT2 dataset which contains observations on patients living in the same area in Senegal. It can also be noted that RF, LR, SVM and ANN have better precision than the rapid diagnostic test carried out and systematically used in the majority of health structures in Senegal. This observation remains true with DT4 which is a perfectly balanced dataset. In conclusion, it is very difficult or even impossible for us to say definitively which algorithm is more efficient for the task of predicting malaria, but the choice of this one will strongly depend on the choice of the data set. However, this study shows that our classification problem has been taken care of. A method integrating several models and various datasets is necessary
 
 \begin{figure}
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=0.8]
  \centering
 \begin{axis}[
     height=8cm, width=15.5cm,
@@ -198,13 +198,13 @@ However, on these same datasets, the algorithms often present very low specifici
 \legend{DT1,DT2,DT3,DT4,DT5}
 \end{axis}
 \end{tikzpicture}
-\caption{comparison of Precision achieved by six classifiers}
+\caption{Precision values of compared classifiers on different datasets}
 
 \end{figure}
 
 
 \begin{figure}
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=0.8]
  \centering
 \begin{axis}[
     height=8cm, width=15.5cm,
@@ -229,6 +229,6 @@ However, on these same datasets, the algorithms often present very low specifici
 \legend{Precision,F1-score,Specificity,DT4}
 \end{axis}
 \end{tikzpicture}
-\caption{comparison of other performance measures in classifiers on DT1}
+\caption{Precison, F1-score, specificity values of the classifiers on DT1}
 
 \end{figure}
