@@ -1194,6 +1194,7 @@
 \else\setlength\tablewidth{\textwidth}\fi
 %\pagestyle{headings}
 \pagestyle{empty}
+
 \endinput
 %%
 %% End of file `IOS-Book-Article.cls'.
