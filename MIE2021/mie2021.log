@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.29)  25 NOV 2020 01:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.29)  25 NOV 2020 01:25
 entering extended mode
 **./mie2021.tex
 (mie2021.tex
@@ -1007,108 +1007,18 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 67.
 
 (Introduction.tex
-
-LaTeX Warning: Citation `19WMR' on page  undefined on input line 5.
-
-
-LaTeX Warning: Citation `Ga19' on page  undefined on input line 7.
-
-
-LaTeX Warning: Citation `Le74' on page  undefined on input line 7.
-
-
-LaTeX Warning: Citation `ermert2011development' on page  undefined on input lin
-e 7.
-
-
-LaTeX Warning: Citation `Hu17' on page  undefined on input line 7.
-
-
-LaTeX Warning: Citation `Hu17' on page  undefined on input line 7.
-
-
-LaTeX Warning: Citation `Hu17' on page  undefined on input line 9.
-
-
-LaTeX Warning: Reference `Methods' on page  undefined on input line 9.
-
-
-LaTeX Warning: Citation `mitchell1997machine' on page  undefined on input line 
-10.
-
-
-LaTeX Warning: Citation `Ug1' on page  undefined on input line 10.
-
-
-LaTeX Warning: Citation `mbaye2019towards' on page  undefined on input line 10.
-
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 7--15
 
  []
 
-[1{C:/Users/ASUS/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]) (Methods.tex
-
-LaTeX Warning: Citation `de2018binary' on page  undefined on input line 6.
-
-
-LaTeX Warning: Citation `tomar2013survey' on page  undefined on input line 6.
-
-
-LaTeX Warning: Citation `Ro05' on page  undefined on input line 7.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
-een already used, duplicate ignored
+[1{C:/Users/ASUS/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]) (Methods.texp
+dfTeX warning (ext4): destination with the same identifier (name{page.}) has be
+en already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.8 
-     [2]
-
-LaTeX Warning: Citation `Be01' on page  undefined on input line 10.
-
-
-LaTeX Warning: Citation `Be01' on page  undefined on input line 10.
-
-
-LaTeX Warning: Citation `Ka17' on page  undefined on input line 12.
-
-
-LaTeX Warning: Citation `Ph88' on page  undefined on input line 15.
-
-
-LaTeX Warning: Citation `uddin2019comparing' on page  undefined on input line 1
-5.
-
-
-LaTeX Warning: Citation `wang2014support' on page  undefined on input line 16.
-
-
-LaTeX Warning: Citation `de2018binary' on page  undefined on input line 16.
-
-
-LaTeX Warning: Citation `Ev01' on page  undefined on input line 20.
-
-
-LaTeX Warning: Citation `Me19' on page  undefined on input line 22.
-
-
-LaTeX Warning: Citation `anderson1972simple' on page  undefined on input line 2
-2.
-
-
-LaTeX Warning: Citation `raschka2015python' on page  undefined on input line 22
-.
-
-) (Results.tex
-
-LaTeX Warning: Citation `Ch17' on page  undefined on input line 4.
-
-
-LaTeX Warning: Reference `raw_data' on page  undefined on input line 5.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
-een already used, duplicate ignored
+     [2]) (Results.texpdfTeX warning (ext4): destination with the same identifi
+er (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.7 
@@ -1161,20 +1071,13 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 90.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 90.
 Package rerunfilecheck Info: File `mie2021.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 90.
  ) 
 Here is how much of TeX's memory you used:
- 29238 strings out of 481199
- 712139 string characters out of 2906064
+ 29250 strings out of 481199
+ 712371 string characters out of 2906064
  1125273 words of memory out of 3000000
- 44274 multiletter control sequences out of 15000+200000
+ 44280 multiletter control sequences out of 15000+200000
  570989 words of font info for 97 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,21n,106p,1941b,2349s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1185,9 +1088,9 @@ pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 tmb8a.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/ut
 mr8a.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on mie2021.pdf (8 pages, 101506 bytes).
+Output written on mie2021.pdf (8 pages, 107065 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
- 37 named destinations out of 1000 (max. 500000)
+ 140 PDF objects out of 1000 (max. 8388607)
+ 43 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

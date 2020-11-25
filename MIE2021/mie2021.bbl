@@ -44,6 +44,28 @@ Mbaye O, Ba ML, Camara G, Sy A, Mboup BM, Diallo A.
 \newblock In: International Conference on Innovations and Interdisciplinary
   Solutions for Underserved Areas. Springer; 2019. p. 173--188.
 
+\bibitem{de2018binary}
+De~Oliveira H, Prodel M, Augusto V.
+\newblock Binary Classification on French Hospital Data: Benchmark of 7 Machine
+  Learning Algorithms.
+\newblock In: 2018 IEEE International Conference on Systems, Man, and
+  Cybernetics (SMC). IEEE; 2018. p. 1743--1748.
+
+\bibitem{tomar2013survey}
+Tomar D, Agarwal S.
+\newblock A survey on Data Mining approaches for Healthcare.
+\newblock International Journal of Bio-Science and Bio-Technology.
+  2013;5(5):241--266.
+
+\bibitem{Ro05}
+Rokach L, Maimon O.
+\newblock In: Decision Trees. vol.~6. Springer; 2005. p. 165--192.
+
+\bibitem{Be01}
+Breiman L.
+\newblock Random Forests.
+\newblock Machine Learning. 2001;45(1):5--32.
+
 \bibitem{Ka17}
 Kaviani P, Dhotre S.
 \newblock Short Survey on Naive Bayes Algorithm.
@@ -55,9 +77,14 @@ Morgan SP, Teachman JD.
 \newblock Logistic Regression: Description, Examples, and Comparisons.
 \newblock Journal of Marriage and Family. 1988;50(4):929--936.
 
-\bibitem{Ro05}
-Rokach L, Maimon O.
-\newblock In: Decision Trees. vol.~6. Springer; 2005. p. 165--192.
+\bibitem{uddin2019comparing}
+Uddin S, Khan A, Hossain ME, Moni MA.
+\newblock Comparing different supervised machine learning algorithms for
+  disease prediction.
+\newblock BMC Medical Informatics and Decision Making. 2019;19(1):1--16.
+
+\bibitem{wang2014support}
+Wang PW, Lin CJ. Support Vector Machines.; 2014.
 
 \bibitem{Ev01}
 Evgeniou T, Pontil M.
@@ -65,15 +92,20 @@ Evgeniou T, Pontil M.
 \newblock In: Studies in Fuzziness and Soft Computing. vol. 2049; 2001. p.
   249--257.
 
-\bibitem{Be01}
-Breiman L.
-\newblock Random Forests.
-\newblock Machine Learning. 2001;45(1):5--32.
-
 \bibitem{Me19}
 Mehlig B.
 \newblock Artificial Neural Networks.
 \newblock In: arXiv; 2019. 1901.05639.
+
+\bibitem{anderson1972simple}
+Anderson JA.
+\newblock A simple neural network generating an interactive memory.
+\newblock Mathematical biosciences. 1972;14(3-4):197--220.
+
+\bibitem{raschka2015python}
+Raschka S.
+\newblock Python machine learning.
+\newblock Packt Publishing Ltd; 2015.
 
 \bibitem{Ch17}
 Sokhna C, Mboup BM, Sow PG, Camara G, Dieng M, Sylla M, et~al.
