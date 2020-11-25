@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.29)  25 NOV 2020 00:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.29)  25 NOV 2020 00:28
 entering extended mode
 **./mie2021.tex
 (mie2021.tex
@@ -1011,14 +1011,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--15
 
  []
 
-[1{C:/Users/ASUS/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]) (Methods.texp
-dfTeX warning (ext4): destination with the same identifier (name{page.}) has be
-en already used, duplicate ignored
+[1{C:/Users/ASUS/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]) (Methods.tex)
+(Results.texpdfTeX warning (ext4): destination with the same identifier (name{p
+age.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.16 
-      [2]
-Overfull \hbox (22.69304pt too wide) in paragraph at lines 20--31
+l.7 
+     [2]
+Overfull \hbox (22.69304pt too wide) in paragraph at lines 11--22
  [][] 
  []
 
@@ -1026,9 +1026,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.63 
-      [3]) (Results.tex
-Overfull \hbox (4.58955pt too wide) in paragraph at lines 11--85
+l.54 
+      [3]
+Overfull \hbox (4.58955pt too wide) in paragraph at lines 66--139
  [][] 
  []
 
@@ -1069,9 +1069,9 @@ Package rerunfilecheck Info: File `mie2021.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 90.
  ) 
 Here is how much of TeX's memory you used:
- 29238 strings out of 481199
- 712154 string characters out of 2906064
- 1125271 words of memory out of 3000000
+ 29237 strings out of 481199
+ 712128 string characters out of 2906064
+ 1126272 words of memory out of 3000000
  44274 multiletter control sequences out of 15000+200000
  570989 words of font info for 97 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1083,9 +1083,9 @@ pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 tmb8a.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/ut
 mr8a.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on mie2021.pdf (7 pages, 100741 bytes).
+Output written on mie2021.pdf (7 pages, 100032 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
- 37 named destinations out of 1000 (max. 500000)
+ 117 PDF objects out of 1000 (max. 8388607)
+ 36 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

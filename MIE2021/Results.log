@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.29)  25 NOV 2020 00:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.29)  25 NOV 2020 00:13
 entering extended mode
 **./Results.tex
 (Results.tex
@@ -428,7 +428,7 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no 7 in font nullfont!
 Missing character: There is no 4 in font nullfont!
 ! Undefined control sequence.
-l.38 \multirow
+l.37 \multirow
               {-4}{*}{ \textbf{Random Forest}}&   DT5 &0.99 &0.84&0.91&0.76&...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -577,7 +577,7 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no 7 in font nullfont!
 Missing character: There is no 2 in font nullfont!
 ! Undefined control sequence.
-l.49 \multirow
+l.48 \multirow
               {-4}{*}{ \textbf{Logistic Regression}}&   DT5 & 0.90&0.78&0.88...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -726,7 +726,7 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no 7 in font nullfont!
 Missing character: There is no 3 in font nullfont!
 ! Undefined control sequence.
-l.60 \multirow
+l.59 \multirow
               {-4}{*}{ \textbf{Naive Bays}}&0.99 &0.82&0.90&0.84&85.61&0.71&...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -876,7 +876,7 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no 7 in font nullfont!
 Missing character: There is no 3 in font nullfont!
 ! Undefined control sequence.
-l.71  \multirow
+l.70  \multirow
                {-4}{*}{ \textbf{Support V Machine}}& DT5 &0.99 &0.86&0.92&0....
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1024,7 +1024,7 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no 7 in font nullfont!
 Missing character: There is no 5 in font nullfont!
 ! Undefined control sequence.
-l.82   \multirow
+l.81   \multirow
                 {-4}{*}{ \textbf{ Artificial N Network}}&DT5 &0.99 &0.84&0.9...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1070,7 +1070,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.85 \end{table}
+l.84 \end{table}
                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
