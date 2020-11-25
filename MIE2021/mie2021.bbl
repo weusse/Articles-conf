@@ -1,0 +1,84 @@
+\begin{thebibliography}{10}
+
+\bibitem{19WMR}
+Organization WH. 2019 World Malaria Report; 2019.
+\newblock
+  \url{https://www.who.int/malaria/publications/world-malaria-report-2019/en/}.
+
+\bibitem{Ga19}
+Garrido-Cardenas J, Cebrian-Carmona J, Gonzalez-Ceron L, Manzano-Agugliaro F,
+  Mesa-Valle C.
+\newblock Analysis of Global Research on Malaria and Plasmodium vivax.
+\newblock International Journal of Environmental Research and Public Health.
+  2019 05;16.
+
+\bibitem{Le74}
+Lepes T.
+\newblock Review of research on malaria.
+\newblock Bulletin of the World Health Organization. 1974;50(3-4):151 -- 157.
+
+\bibitem{ermert2011development}
+Ermert V, Fink A, Jones A, Morse A.
+\newblock Development of a new version of the Liverpool Malaria Model.
+\newblock Malaria journal. 2011 02;10:35.
+
+\bibitem{Hu17}
+Houzé S.
+\newblock Rapid diagnostic test for malaria.
+\newblock Bull Soc Pathol Exot.
+
+\bibitem{mitchell1997machine}
+Mitchell TM, et~al.
+\newblock Machine learning.
+\newblock McGraw-Hill,In; 1997.
+
+\bibitem{Ug1}
+Yadav AMSMKA Abhishek.
+\newblock Better Healthcare using Machine Learning.
+\newblock International Journal of Advanced Research in Computer Science.
+  2010;9(1).
+
+\bibitem{mbaye2019towards}
+Mbaye O, Ba ML, Camara G, Sy A, Mboup BM, Diallo A.
+\newblock Towards an Efficient Prediction Model of Malaria Cases in Senegal.
+\newblock In: International Conference on Innovations and Interdisciplinary
+  Solutions for Underserved Areas. Springer; 2019. p. 173--188.
+
+\bibitem{Ka17}
+Kaviani P, Dhotre S.
+\newblock Short Survey on Naive Bayes Algorithm.
+\newblock International Journal of Advance Research in Computer Science and
+  Management. 2017 11;04.
+
+\bibitem{Ph88}
+Morgan SP, Teachman JD.
+\newblock Logistic Regression: Description, Examples, and Comparisons.
+\newblock Journal of Marriage and Family. 1988;50(4):929--936.
+
+\bibitem{Ro05}
+Rokach L, Maimon O.
+\newblock In: Decision Trees. vol.~6. Springer; 2005. p. 165--192.
+
+\bibitem{Ev01}
+Evgeniou T, Pontil M.
+\newblock Support Vector Machines: Theory and Applications.
+\newblock In: Studies in Fuzziness and Soft Computing. vol. 2049; 2001. p.
+  249--257.
+
+\bibitem{Be01}
+Breiman L.
+\newblock Random Forests.
+\newblock Machine Learning. 2001;45(1):5--32.
+
+\bibitem{Me19}
+Mehlig B.
+\newblock Artificial Neural Networks.
+\newblock In: arXiv; 2019. 1901.05639.
+
+\bibitem{Ch17}
+Sokhna C, Mboup BM, Sow PG, Camara G, Dieng M, Sylla M, et~al.
+\newblock Communicable and non-communicable disease risks at the Grand Magal of
+  Touba: The largest mass gathering in Senegal.
+\newblock Travel Medicine and Infectious Disease. 2017;19:56 -- 60.
+
+\end{thebibliography}

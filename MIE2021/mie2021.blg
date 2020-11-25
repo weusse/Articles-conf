@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: mie2021.aux
+Reallocating 'name_of_file' (item size: 1) to 10 items.
+The style file: vancouver.bst
+Reallocating 'name_of_file' (item size: 1) to 10 items.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Database file #1: ../biblio.bib
+Warning--empty author and editor in 19WMR
+Warning--missing publisher in 19WMR
+Warning--empty year in Hu17
+Too many commas in name 1 of "Yadav, Abhishek, Arpitha, M.  S. , Mithun, K.  A. " for entry Ug1
+while executing---line 1863 of file vancouver.bst
+Too many commas in name 1 of "Yadav, Abhishek, Arpitha, M.  S. , Mithun, K.  A. " for entry Ug1
+while executing---line 1863 of file vancouver.bst
+Too many commas in name 1 of "Yadav, Abhishek, Arpitha, M.  S. , Mithun, K.  A. " for entry Ug1
+while executing---line 1863 of file vancouver.bst
+Warning--empty chapter in Ro05
+Warning--empty pages in Me19
+You've used 15 entries,
+            3177 wiz_defined-function locations,
+            745 strings with 6925 characters,
+and the built_in function-call counts, 23150 in all, are:
+= -- 2939
+> -- 152
+< -- 5
++ -- 84
+- -- 38
+* -- 1851
+:= -- 2492
+add.period$ -- 53
+call.type$ -- 15
+change.case$ -- 10
+chr.to.int$ -- 0
+cite$ -- 20
+duplicate$ -- 2065
+empty$ -- 2218
+format.name$ -- 47
+if$ -- 5497
+int.to.chr$ -- 0
+int.to.str$ -- 15
+missing$ -- 140
+newline$ -- 76
+num.names$ -- 15
+pop$ -- 285
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 292
+stack$ -- 0
+substring$ -- 4217
+swap$ -- 319
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 5
+while$ -- 113
+width$ -- 17
+write$ -- 164
+(There were 3 error messages)
