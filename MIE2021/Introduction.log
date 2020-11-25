@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.29)  20 NOV 2020 15:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.29)  25 NOV 2020 00:58
 entering extended mode
 **./Introduction.tex
 (Introduction.tex
@@ -2363,23 +2363,6 @@ Missing character: There is no ( in font nullfont!
 Missing character: There is no N in font nullfont!
 Missing character: There is no B in font nullfont!
 Missing character: There is no ) in font nullfont!
-Missing character: There is no [ in font nullfont!
-\citation{Ka17}
-! Undefined control sequence.
-<write> ...: Citation `\@citeb ' on page \thepage 
-                                                  \space undefined\on@line .
-l.11 ...lgorithms are Naive Bayes (NB) \cite{Ka17}
-                                                  , Logistic Regression(LR) ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Citation `Ka17' on page  undefined on input line 11.
-
-Missing character: There is no ] in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no L in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -2403,23 +2386,6 @@ Missing character: There is no ( in font nullfont!
 Missing character: There is no L in font nullfont!
 Missing character: There is no R in font nullfont!
 Missing character: There is no ) in font nullfont!
-Missing character: There is no [ in font nullfont!
-\citation{Ph88}
-! Undefined control sequence.
-<write> ...: Citation `\@citeb ' on page \thepage 
-                                                  \space undefined\on@line .
-l.11 ...Ka17}, Logistic Regression(LR) \cite{Ph88}
-                                                  ,  Decision Tree(DT) \cite...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Citation `Ph88' on page  undefined on input line 11.
-
-Missing character: There is no ] in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no D in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -2437,23 +2403,6 @@ Missing character: There is no ( in font nullfont!
 Missing character: There is no D in font nullfont!
 Missing character: There is no T in font nullfont!
 Missing character: There is no ) in font nullfont!
-Missing character: There is no [ in font nullfont!
-\citation{Ro05}
-! Undefined control sequence.
-<write> ...: Citation `\@citeb ' on page \thepage 
-                                                  \space undefined\on@line .
-l.11 ...cite{Ph88},  Decision Tree(DT) \cite{Ro05}
-                                                  , Support Vector Machine(S...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Citation `Ro05' on page  undefined on input line 11.
-
-Missing character: There is no ] in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no S in font nullfont!
 Missing character: There is no u in font nullfont!
@@ -2480,23 +2429,6 @@ Missing character: There is no S in font nullfont!
 Missing character: There is no V in font nullfont!
 Missing character: There is no M in font nullfont!
 Missing character: There is no ) in font nullfont!
-Missing character: There is no [ in font nullfont!
-\citation{Ev01}
-! Undefined control sequence.
-<write> ...: Citation `\@citeb ' on page \thepage 
-                                                  \space undefined\on@line .
-l.11 ...}, Support Vector Machine(SVM) \cite{Ev01}
-                                                  ,
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Citation `Ev01' on page  undefined on input line 11.
-
-Missing character: There is no ] in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no R in font nullfont!
 Missing character: There is no a in font nullfont!
@@ -2514,23 +2446,6 @@ Missing character: There is no ( in font nullfont!
 Missing character: There is no R in font nullfont!
 Missing character: There is no F in font nullfont!
 Missing character: There is no ) in font nullfont!
-Missing character: There is no [ in font nullfont!
-\citation{Be01}
-! Undefined control sequence.
-<write> ...: Citation `\@citeb ' on page \thepage 
-                                                  \space undefined\on@line .
-l.12  Random Forest(RF) \cite{Be01}
-                                   ,
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Citation `Be01' on page  undefined on input line 12.
-
-Missing character: There is no ] in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no n in font nullfont!
@@ -2563,23 +2478,6 @@ Missing character: There is no A in font nullfont!
 Missing character: There is no N in font nullfont!
 Missing character: There is no N in font nullfont!
 Missing character: There is no ) in font nullfont!
-Missing character: There is no [ in font nullfont!
-\citation{Me19}
-! Undefined control sequence.
-<write> ...: Citation `\@citeb ' on page \thepage 
-                                                  \space undefined\on@line .
-l.13 ...Artificial Neural Network(ANN) \cite{Me19}
-                                                  . We conducted experiments...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Citation `Me19' on page  undefined on input line 13.
-
-Missing character: There is no ] in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no W in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -3352,6 +3250,159 @@ Missing character: There is no u in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 7--15
+[]
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 7--15
+[]
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 7--15
+[]
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 7--15
+[]
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 7--15
+[]
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 7--15
+[]
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 7--15
+[]
+ []
+
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 7--15
+[]
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 7--15
+[]
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 7--15
+[]
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 7--15
+[]
+ []
+
+
+Overfull \hbox (18.6665pt too wide) in paragraph at lines 7--15
+\OT1/cmr/m/it/10 Pre-
+ []
+
+
+Overfull \hbox (11.24435pt too wide) in paragraph at lines 7--15
+\OT1/cmr/m/it/10 ci-
+ []
+
+
+Overfull \hbox (17.8888pt too wide) in paragraph at lines 7--15
+\OT1/cmr/m/it/10 sion
+ []
+
+
+Overfull \hbox (14.96098pt too wide) in paragraph at lines 7--15
+\OT1/cmr/m/it/10 Re-
+ []
+
+
+Overfull \hbox (14.82211pt too wide) in paragraph at lines 7--15
+\OT1/cmr/m/it/10 call
+ []
+
+
+Overfull \hbox (15.21655pt too wide) in paragraph at lines 7--15
+\OT1/cmr/m/it/10 F1-
+ []
+
+
+Overfull \hbox (21.59425pt too wide) in paragraph at lines 7--15
+\OT1/cmr/m/it/10 score
+ []
+
+
+Overfull \hbox (20.57207pt too wide) in paragraph at lines 7--15
+\OT1/cmr/m/it/10 True
+ []
+
+
+Overfull \hbox (19.56099pt too wide) in paragraph at lines 7--15
+\OT1/cmr/m/it/10 Pos-
+ []
+
+
+Overfull \hbox (6.6444pt too wide) in paragraph at lines 7--15
+\OT1/cmr/m/it/10 i-
+ []
+
+
+Overfull \hbox (15.58876pt too wide) in paragraph at lines 7--15
+\OT1/cmr/m/it/10 tive
+ []
+
+
+Overfull \hbox (19.81651pt too wide) in paragraph at lines 7--15
+\OT1/cmr/m/it/10 Rate
+ []
+
+
+Overfull \hbox (22.11652pt too wide) in paragraph at lines 7--15
+\OT1/cmr/m/it/10 False
+ []
+
+
+Overfull \hbox (19.56099pt too wide) in paragraph at lines 7--15
+\OT1/cmr/m/it/10 Pos-
+ []
+
+
+Overfull \hbox (6.6444pt too wide) in paragraph at lines 7--15
+\OT1/cmr/m/it/10 i-
+ []
+
+
+Overfull \hbox (15.58876pt too wide) in paragraph at lines 7--15
+\OT1/cmr/m/it/10 tive
+ []
+
+
+Overfull \hbox (19.81651pt too wide) in paragraph at lines 7--15
+\OT1/cmr/m/it/10 Rate
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 T
+      he rest of the paper is structured as follows.First we gives detail ex...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 Missing character: There is no T in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -3614,173 +3665,8 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 7--17
+Overfull \hbox (20.0pt too wide) in paragraph at lines 17--18
 []
- []
-
-
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 7--17
-[]
- []
-
-
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 7--17
-[]
- []
-
-
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 7--17
-[]
- []
-
-
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 7--17
-[]
- []
-
-
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 7--17
-[]
- []
-
-
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 7--17
-[]
- []
-
-
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 7--17
-[]
- []
-
-
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 7--17
-[]
- []
-
-
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 7--17
-[]
- []
-
-
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 7--17
-[]
- []
-
-
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 7--17
-[]
- []
-
-
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 7--17
-[]
- []
-
-
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 7--17
-[]
- []
-
-
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 7--17
-[]
- []
-
-
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 7--17
-[]
- []
-
-
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 7--17
-[]
- []
-
-
-Overfull \hbox (18.6665pt too wide) in paragraph at lines 7--17
-\OT1/cmr/m/it/10 Pre-
- []
-
-
-Overfull \hbox (11.24435pt too wide) in paragraph at lines 7--17
-\OT1/cmr/m/it/10 ci-
- []
-
-
-Overfull \hbox (17.8888pt too wide) in paragraph at lines 7--17
-\OT1/cmr/m/it/10 sion
- []
-
-
-Overfull \hbox (14.96098pt too wide) in paragraph at lines 7--17
-\OT1/cmr/m/it/10 Re-
- []
-
-
-Overfull \hbox (14.82211pt too wide) in paragraph at lines 7--17
-\OT1/cmr/m/it/10 call
- []
-
-
-Overfull \hbox (15.21655pt too wide) in paragraph at lines 7--17
-\OT1/cmr/m/it/10 F1-
- []
-
-
-Overfull \hbox (21.59425pt too wide) in paragraph at lines 7--17
-\OT1/cmr/m/it/10 score
- []
-
-
-Overfull \hbox (20.57207pt too wide) in paragraph at lines 7--17
-\OT1/cmr/m/it/10 True
- []
-
-
-Overfull \hbox (19.56099pt too wide) in paragraph at lines 7--17
-\OT1/cmr/m/it/10 Pos-
- []
-
-
-Overfull \hbox (6.6444pt too wide) in paragraph at lines 7--17
-\OT1/cmr/m/it/10 i-
- []
-
-
-Overfull \hbox (15.58876pt too wide) in paragraph at lines 7--17
-\OT1/cmr/m/it/10 tive
- []
-
-
-Overfull \hbox (19.81651pt too wide) in paragraph at lines 7--17
-\OT1/cmr/m/it/10 Rate
- []
-
-
-Overfull \hbox (22.11652pt too wide) in paragraph at lines 7--17
-\OT1/cmr/m/it/10 False
- []
-
-
-Overfull \hbox (19.56099pt too wide) in paragraph at lines 7--17
-\OT1/cmr/m/it/10 Pos-
- []
-
-
-Overfull \hbox (6.6444pt too wide) in paragraph at lines 7--17
-\OT1/cmr/m/it/10 i-
- []
-
-
-Overfull \hbox (15.58876pt too wide) in paragraph at lines 7--17
-\OT1/cmr/m/it/10 tive
- []
-
-
-Overfull \hbox (19.81651pt too wide) in paragraph at lines 7--17
-\OT1/cmr/m/it/10 Rate
  []
 
 )
@@ -3793,9 +3679,9 @@ Overfull \hbox (19.81651pt too wide) in paragraph at lines 7--17
 Here is how much of TeX's memory you used:
  24 strings out of 481199
  511 string characters out of 2906064
- 246111 words of memory out of 3000000
+ 245111 words of memory out of 3000000
  15725 multiletter control sequences out of 15000+200000
  535742 words of font info for 31 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 18i,2n,23p,943b,92s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 18i,2n,23p,931b,92s stack positions out of 5000i,500n,10000p,200000b,50000s
 !  ==> Fatal error occurred, no output PDF file produced!
