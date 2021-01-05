@@ -1,0 +1,77 @@
+\section{Results of the experiments}
+Table \ref{raw_data1} presents the results of the experiments with the different algorithms on our data on Malaria. More specifically, Table 2 contains the precision, the recall, the specificity, the AUC mesure, the score and F-measure of each algorithm tested while Figure 1 shows their respective ROC curve.  
+\begin{table}[h]
+\begin{tabular}{|l|c|c|c|c|c|c|c|}
+\hline
+\cline{2-8}
+ \textbf{ML ALgorithms} &  \textbf{Datasets} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score}&\textbf{AUC} &\textbf{Score}&\textbf{Specificity}\tabularnewline
+\hline
+\cline{2-8}
+ &  DT1 &0.97  & 1   & 0.98 & 0.78 & 97.04 & 0.05 \\
+\cline{2-8}
+& DT2 & 0.59 &0.48 &0.48  &0.64  &63.01  &0.80\\
+\cline{2-8}
+& DT3 &0.89  &0.85 &0.87  &0.86  &80.86  &0.69\\
+\cline{2-8}
+& DT4 &0.68  &0.57 &0.62  &0.70  &65.60  &0.74\\
+\cline{2-8}
+\multirow{-4}{*}{ \textbf{Decision Tree}}&   DT5 &0.99  &0.84 &0.91  &0.76  &83.41  &0.58\\
+\hline
+\cline{2-8}
+&DT1 &0.97 &1   &0.99 &0.81 &97.13& 0.07\\
+\cline{2-8}
+ & DT2 &0.63  & 0.34  &0.44&0.64&63.33& 0.85\\
+ \cline{2-8}
+ & DT3 &0.89 &0.85 &0.87&087&80.86&0.70\\
+ \cline{2-8}
+ & DT4 &0.68 &0.56&0.62&0.70&65.82&0.74\\
+\cline{2-8}
+\multirow{-4}{*}{ \textbf{Random Forest}}&   DT5 &0.99 &0.84&0.91&0.76&78.35&0.60\\
+\hline
+\cline{2-8}
+&DT1 &0.97 &1   &0.99 &0.79 &97.19&0.05 \\
+\cline{2-8}
+ &DT2 & 0.58 &0.36   &0.44&0.63&61.96&0.81\\
+ \cline{2-8}
+  &DT3 &0.85 &0.88 &0.86&0.86&79.59&0.55\\
+  \cline{2-8}
+  &DT4 &0.98 &0.56&0.92&0.70&65.82&0.72\\
+  \cline{2-8}
+\multirow{-4}{*}{ \textbf{Logistic Regression}}&   DT5 & 0.90&0.78&0.88&0.84&81.86&0.75\\
+\hline
+\cline{2-8}
+& DT1 &0.97 &1   &0.99 &0.81 &97.13 &0.00\\
+ \cline{2-8}
+  &DT2 & 0.60 &0.34   &0.43&0.63&62.86&0.83 \\
+  \cline{2-8}
+  &DT3 &0.86 &0.87 &0.86&0.85&79.94&0.60\\
+  \cline{2-8}
+  &DT4 &0.68 &0.59&0.63&0.70&65.63&0.73\\
+  \cline{2-8}
+\multirow{-4}{*}{ \textbf{Naive Bays}}&0.99 &0.82&0.90&0.84&85.61&0.71&0.71\\
+\hline
+\cline{2-8}
+&DT1 &0.97 &1   &0.99 &0.84 &97.13&0.00 \\
+\cline{2-8}
+  &DT2 &0.58  &0.05   & 0.09&0.62&62.86&0.97\\
+  \cline{2-8}
+  &DT3 &0.57 & 0.86&0.86&0.85&79.94&0.64\\
+  \cline{2-8}
+ & DT4 & 0.68&0.58&0.62&0.70&65.63&0.73\\
+ \cline{2-8}
+ \multirow{-4}{*}{ \textbf{Support V Machine}}& DT5 &0.99 &0.86&0.92&0.80&85.61&0.62\\
+ \hline
+\cline{2-8}
+&DT1 &0.97&1 &0.99   &0.84 &97.15&0.04  \\
+\cline{2-8}
+&  DT2 &0.59  &0.40   &0.48&0.65&62.86&0.80 \\
+\cline{2-8}
+ & DT3 &0.89 &0.85 &0.87&0.87&86.68&0.69\\
+ \cline{2-8}
+ & DT4 &0.68 &0.58&0.62&0.70&0.70&0.75\\
+  \cline{2-8}
+  \multirow{-4}{*}{ \textbf{ Artificial N Network}}&DT5 &0.99 &0.84&0.91&0.79&83.26&0.65\\ 
+  \hline
+\end{tabular}
+\caption{Performances measures of our classifiers over all datasets}\label{raw_data1}
+\end{table}
