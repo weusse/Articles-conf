@@ -1194,10 +1194,10 @@
 \else\setlength\tablewidth{\textwidth}\fi
 %\pagestyle{headings}
 \pagestyle{empty}
-<<<<<<< HEAD
+%<<<<<<< HEAD
 
-=======
->>>>>>> c5f4a12... Mise a jour Method
+%=======
+%>>>>>>> c5f4a12... Mise a jour Method
 \endinput
 %%
 %% End of file `IOS-Book-Article.cls'.
