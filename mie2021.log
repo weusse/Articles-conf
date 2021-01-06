@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.29)  6 JAN 2021 00:28
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.29)  6 JAN 2021 00:43
->>>>>>> 4fd516e... Mise a jour article
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.29)  6 JAN 2021 22:49
 entering extended mode
 **./mie2021.tex
 (mie2021.tex
@@ -1041,8 +1037,13 @@ Overfull \hbox (4.58955pt too wide) in paragraph at lines 4--76
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-(Discussion.texpdfTeX warning (ext4): destination with the same identifier (nam
-e{page.}) has been already used, duplicate ignored
+(Discussion.tex
+Overfull \hbox (34.71133pt too wide) in paragraph at lines 30--31
+ [][] 
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.34 
@@ -1051,23 +1052,41 @@ l.34
 <to be read again> 
                    \relax 
 l.34 
-      [6]) (Conclusion.tex)pdfTeX warning (ext4): destination with the same ide
-ntifier (name{page.}) has been already used, duplicate ignored
+      [6]
+Overfull \hbox (34.71133pt too wide) in paragraph at lines 61--63
+ [][] 
+ []
+
+
+Overfull \hbox (34.71133pt too wide) in paragraph at lines 92--93
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (Conclusion.tex) (mie2021.bblpdfTeX warning (ext4): destination with the same
+ identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.88 
-      [7] (mie2021.bbl
+l.1 \begin{thebibliography}{10}
+                                [7]
 Underfull \hbox (badness 3815) in paragraph at lines 4--7
 []\OT1/ptm/m/n/8 Organization WH. 2019 World Malaria Re-port; 2019.  []$\OT1/cm
 tt/m/n/8 https : / / www . who . int / malaria /
  []
 
-)pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.105 \bibitem{raschka2015python}
+                                  [8])pdfTeX warning (ext4): destination with t
+he same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.94 \end{document}
-                    [8]
+                    [9]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 94.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 94.
  (mie2021.aux)
@@ -1078,17 +1097,13 @@ Package rerunfilecheck Info: File `mie2021.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 94.
  ) 
 Here is how much of TeX's memory you used:
- 29251 strings out of 481199
-<<<<<<< HEAD
- 712384 string characters out of 2906064
-=======
- 712397 string characters out of 2906064
->>>>>>> 4fd516e... Mise a jour article
- 1125270 words of memory out of 3000000
- 44281 multiletter control sequences out of 15000+200000
+ 29246 strings out of 481199
+ 712190 string characters out of 2906064
+ 1125272 words of memory out of 3000000
+ 44278 multiletter control sequences out of 15000+200000
  570989 words of font info for 97 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,21n,106p,1941b,2349s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,20n,102p,1941b,2328s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/
 Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.
 pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
@@ -1096,9 +1111,9 @@ pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 tmb8a.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/ut
 mr8a.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on mie2021.pdf (8 pages, 106324 bytes).
+Output written on mie2021.pdf (9 pages, 106635 bytes).
 PDF statistics:
  141 PDF objects out of 1000 (max. 8388607)
- 43 named destinations out of 1000 (max. 500000)
+ 41 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
