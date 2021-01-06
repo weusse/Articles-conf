@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.29)  6 JAN 2021 00:28
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.29)  6 JAN 2021 00:43
+>>>>>>> 4fd516e... Mise a jour article
 entering extended mode
 **./mie2021.tex
 (mie2021.tex
@@ -1075,7 +1079,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 94.
  ) 
 Here is how much of TeX's memory you used:
  29251 strings out of 481199
+<<<<<<< HEAD
  712384 string characters out of 2906064
+=======
+ 712397 string characters out of 2906064
+>>>>>>> 4fd516e... Mise a jour article
  1125270 words of memory out of 3000000
  44281 multiletter control sequences out of 15000+200000
  570989 words of font info for 97 fonts, out of 3000000 for 9000
