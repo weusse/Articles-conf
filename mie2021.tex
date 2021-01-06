@@ -1,4 +1,6 @@
+
 \documentclass{IOS-Book-Article}
+
 \usepackage{mathptmx}
 \usepackage{soul}\setuldepth{article}
 \usepackage{booktabs}
@@ -32,10 +34,11 @@
 %\renewcommand*{\familydefault}{\sfdefault}
 \usepackage{tikz}
 \def\hb{\hbox to 10.7 cm{}}
-
 \begin{document}
+
 \pagestyle{headings}
 \def\thepage{}
+
 \begin{frontmatter}              % The preamble begins here
 
 %\pretitle{Pretitle}
@@ -55,8 +58,7 @@ and
 \address{LIMA, Universit\'e Alioune Diop, Bambey, Senegal}
 %\address[B]{Short Affiliation of Second Author and Third Author}
 
-\begin{abstract}
-
+\begin{abstract}\\
 \textbf{Background}
 Malaria is a major health problem in Senegal where it is endemic with a seasonal upsurge, therefore they represents about 35\% of the reasons for consultation. This is mainly due to inappropriate medical care support coupled with an often late and error-prone diagnosis from the medical staff. In addition, largely used diagnostic standards such as the Rapid Diagnosis Test is not fully reliable. With the development and increasing adoption of automated tools in the health field, machine learning applications might help medical actors in their decision-making process. \\
 \textbf{Methods:} In this study we test the efficacy of six machine learning algorithms for the prediction of Malaria in Senegal. These algorithms aim at predicting whether or not a given patient suffers from Malaria based on his signs and symptoms. The performance of the algorithms have been extensively tested and evaluated over real data sets about signs and symptoms of patients in Senegal that suffer or not from Malaria. The algorithms are evaluated using four criteria: accuracy, Recall, F-measure, Precision and Specificity. \\
@@ -83,6 +85,10 @@ Malaria, Prediction, ML algorithm,
 % Data Preparation
 \input{Discussion}
 \input{Conclusion}
+
+
+
+
 \bibliographystyle{vancouver}
 \bibliography{../biblio}
 \end{document}
