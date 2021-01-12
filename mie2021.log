@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.29)  6 JAN 2021 22:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.29)  12 JAN 2021 20:32
 entering extended mode
 **./mie2021.tex
 (mie2021.tex
@@ -1013,7 +1013,7 @@ s been already used, duplicate ignored
                    \relax 
 l.12  \newpage
                [2]) (Methods.tex
-Overfull \hbox (22.69304pt too wide) in paragraph at lines 13--24
+Overfull \hbox (22.69304pt too wide) in paragraph at lines 11--22
  [][] 
  []
 
@@ -1021,72 +1021,63 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.31 \subsection
-                {Machine Learning algorithms studies} [3]pdfTeX warning (ext4):
- destination with the same identifier (name{page.}) has been already used, dupl
-icate ignored
+l.29 \subsection
+                {Machine Learning algorithms studies} [3]) (Results.texpdfTeX w
+arning (ext4): destination with the same identifier (name{page.}) has been alre
+ady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.52 \subsection
-                {Measurement} [4]) (Results.tex
-Overfull \hbox (4.58955pt too wide) in paragraph at lines 4--76
+l.1 \section
+            {Results and discussion} [4]
+Overfull \hbox (4.58955pt too wide) in paragraph at lines 5--77
  [][] 
  []
 
-)
+
+Overfull \hbox (34.71133pt too wide) in paragraph at lines 106--107
+ [][] 
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
-
-(Discussion.tex
-Overfull \hbox (34.71133pt too wide) in paragraph at lines 30--31
- [][] 
- []
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.34 
-      [5]pdfTeX warning (ext4): destination with the same identifier (name{page
-.}) has been already used, duplicate ignored
+l.110 
+       [5]pdfTeX warning (ext4): destination with the same identifier (name{pag
+e.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.34 
-      [6]
-Overfull \hbox (34.71133pt too wide) in paragraph at lines 61--63
+l.110 
+       [6]
+Overfull \hbox (34.71133pt too wide) in paragraph at lines 137--139
  [][] 
  []
 
 
-Overfull \hbox (34.71133pt too wide) in paragraph at lines 92--93
+Overfull \hbox (34.71133pt too wide) in paragraph at lines 168--169
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) (Conclusion.tex) (mie2021.bblpdfTeX warning (ext4): destination with the same
- identifier (name{page.}) has been already used, duplicate ignored
+) (Conclusion.tex)pdfTeX warning (ext4): destination with the same identifier (
+name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \begin{thebibliography}{10}
-                                [7]
+l.88 
+      [7] (mie2021.bbl
 Underfull \hbox (badness 3815) in paragraph at lines 4--7
 []\OT1/ptm/m/n/8 Organization WH. 2019 World Malaria Re-port; 2019.  []$\OT1/cm
 tt/m/n/8 https : / / www . who . int / malaria /
  []
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
-een already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.105 \bibitem{raschka2015python}
-                                  [8])pdfTeX warning (ext4): destination with t
-he same identifier (name{page.}) has been already used, duplicate ignored
+)pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.94 \end{document}
-                    [9]
+                    [8]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 94.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 94.
  (mie2021.aux)
@@ -1097,13 +1088,13 @@ Package rerunfilecheck Info: File `mie2021.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 94.
  ) 
 Here is how much of TeX's memory you used:
- 29246 strings out of 481199
- 712190 string characters out of 2906064
- 1125272 words of memory out of 3000000
- 44278 multiletter control sequences out of 15000+200000
+ 29240 strings out of 481199
+ 712072 string characters out of 2906064
+ 1125273 words of memory out of 3000000
+ 44277 multiletter control sequences out of 15000+200000
  570989 words of font info for 97 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,20n,102p,1941b,2328s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,20n,102p,1938b,2328s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/
 Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.
 pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
@@ -1111,9 +1102,9 @@ pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 tmb8a.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/ut
 mr8a.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on mie2021.pdf (9 pages, 106635 bytes).
+Output written on mie2021.pdf (8 pages, 105105 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
- 41 named destinations out of 1000 (max. 500000)
+ 134 PDF objects out of 1000 (max. 8388607)
+ 38 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
