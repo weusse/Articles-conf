@@ -42,7 +42,7 @@
 \begin{frontmatter}              % The preamble begins here
 
 %\pretitle{Pretitle}
-\title{On the efficiency of Machine Learning Models in predicting Malaria using Sympt\^om Data}
+\title{On the efficiency of machine learning models in Malaria prediction}
 
 \markboth{}{January 2020\hb}
 %\subtitle{Subtitle}
@@ -59,29 +59,20 @@ and
 %\address[B]{Short Affiliation of Second Author and Third Author}
 
 \begin{abstract}\\
-\textbf{Background}
-Malaria is a major health problem in Senegal where it is endemic with a seasonal upsurge, therefore they represents about 35\% of the reasons for consultation. This is mainly due to inappropriate medical care support coupled with an often late and error-prone diagnosis from the medical staff. In addition, largely used diagnostic standards such as the Rapid Diagnosis Test is not fully reliable. With the development and increasing adoption of automated tools in the health field, machine learning applications might help medical actors in their decision-making process. \\
-\textbf{Methods:} In this study we test the efficacy of six machine learning algorithms for the prediction of Malaria in Senegal. These algorithms aim at predicting whether or not a given patient suffers from Malaria based on his signs and symptoms. The performance of the algorithms have been extensively tested and evaluated over real data sets about signs and symptoms of patients in Senegal that suffer or not from Malaria. The algorithms are evaluated using four criteria: accuracy, Recall, F-measure, Precision and Specificity. \\
-\textbf{Results and conclusions:} The results show that overall of ML algorithms perform as well as for predicting occurrence or not of the malaria according the dataset used. However  that there is not necessarily a single best classification tool, but instead the best performing algorithm will depend on the dataset to be analysed. Hence the need to build prediction model by combining the best classifiers among those studied
-
+Malaria is still a real public health conncern in Sub-saharan African countries such as Senegal where it represents approximatively 35\% of the consultation activities in the hospitals. This is mainly due to the lack of appropriate medical care support and often late and error-prone diagnosis of the disease. In addition, largely used diagnostic tools such as the Rapid Diagnosis Test are not fully reliable. This study proposes an extensive study of the efficiency of the most popular  machine learning models for the task of Malaria occurrence prediction. We have considered patients from Senegal and have evaluated the overall precision of each considered algorithm based on sign and symptom information from various datasets. Our main result is that Random Forest, Logistic Regression, Support Vector Machine with Gaussian kernel and Artificial Neural Network present very high precision for the studied prediction problem.
 \end{abstract}
 
 \begin{keyword}
-Malaria, Prediction, ML algorithm, 
-\LaTeX\sep book\sep layout
+Malaria, prediction, ML algorithm, 
+performance\sep evaluation\sep Sign\sep Symptom
 \end{keyword}
 \end{frontmatter}
-\markboth{January 2020\hb}{January 2020\hb}
-%\thispagestyle{empty}
-%\pagestyle{empty}
-
+\markboth{January 2021\hb}
 \input{Introduction}
-\newpage
 % Prediction Model
 \input{Methods}
 % Related work
 \input{Results}
-
 % Data Preparation
 %\input{Discussion}
 \input{Conclusion}
