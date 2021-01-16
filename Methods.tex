@@ -1,10 +1,11 @@
 \section{Methods}\label{Methods}
-This work investigates the problem of Malaria occurrence prediction and proposes to comparatively evaluate the efficiency of the most popular machine algorithms for this. For that, we relied on real datasets and some performance evaluation metrics. We detail next the methodoly used in this study.
+This work studies the problem of Malaria occurrence prediction and proposes to comparatively evaluate the efficiency of the most popular machine algorithms to tackle this issue. 
+To this end, we rely on real data and evaluation metrics, as we detail them next 
 
-\paragraph*{Data collection and preparation}
-In order to carry out  our experiments in a real setting, we have collected two real world datasets about patients living in Senegal. Our first dataset, called DT1, contains medical records about patients living in distinct places in Senegal. and has been collected in 2016 during the \textbf{Grand Magal of Touba}  a big religious event in Senegal that gathers every year several million of people \cite{Ch17}.   The second dataset, called DT2, contains clinical record about patients living in regions of Diourbel, Thies and Fatick where the prevalence of Malaria is very high. After the collection step, we have conducted some cleaning, transformation and imputation tasks on the raw datasets in order to deal with noisy information and missing values. We have then proceeded to feature selection in order to only retain the data attributes (or variables) such as lack of appetite, tiredness, fever, cephalalgia, nausea, arthralgia, digestive disorders, dizziness, chill, myalgia, diarrhea, and abdominal pain pertaining for our study.
+\paragraph*{\bf Data collection and preparation.}
+In order to carry out  our experiments in a real setting, we have collected two real world datasets about patients living in Senegal. Our first dataset, called DT1, contains medical records about patients living in distinct places in Senegal. and has been collected in 2016 during the \emph{\textquote{Grand Magal of Touba}},  a religious event in Senegal gathering several million of persons every year \cite{Ch17}.   The second dataset, denoted by DT2, contains clinical records about patients living in Diourbel, Thies, and Fatick regions where the prevalence of Malaria is very high. After the collection step, we have conducted data \emph{cleaning}, \emph{transformation}, and \emph{imputation} tasks on the raw datasets in order to deal with noisy information and missing values. We have then proceeded to \emph{feature selection} which enables to only retain the data attributes (or variables) such as \emph{lack of appetite, tiredness, fever, cephalalgia, nausea, arthralgia, digestive disorders, dizziness, chill, myalgia, diarrhea, and abdominal pain} pertaining for our study.
 For privacy reasons and certain restrictions in the use of the data, we have ignored patient personal data.
-Table \ref{raw_data} summarizes the main statistics of each dataset after preparation ad the precision of RDT. 
+Table \ref{raw_data} summarizes the main statistics of each dataset after preparation and the precision of RDT as well. 
 \begin{table}[h]
 \resizebox{\textwidth}{!}{
 \centering
@@ -20,22 +21,23 @@ Table \ref{raw_data} summarizes the main statistics of each dataset after prepar
     \bottomrule
   \end{tabular}
   }
-  \caption{Raw Data characteristics}\label{raw_data}
+  \caption{Main statistics of real datasets DT1 and DT2}\label{raw_data}
 \end{table}
 We synthetically generated from DT1 and DT2 three additional datasets DT3, DT4 and DT5  respectively obtained by 
 \begin{inparaenum}[(i)]
- \item by concatenating the DT1 and DT2 :
-\item by selecting 2354 patients who tested negative for malaria from the DT1 and adding to DT2 in order to obtain a balanced dataset;
-\item by doing oversampling on DT1 using SMOTE algorithm in order to same number of individuals in both classes.
+ \item concatenating DT1 and DT2 :
+\item selecting $2354$ patients who have been tested negative for Malaria from DT1 and add them to DT2 in order to obtain a balanced dataset; and
+\item oversampling DT1 using \emph{SMOTE algorithm} in order to have the same number of individuals in both classes.
 \end{inparaenum}
 
-\paragraph*{Machine learning models}
-We consider and compare the six most popular machine leanning approaches \cite{de2018binary,tomar2013survey}: 
-Decision tree (DT)  \cite{Ro05}, Random Forest (RF) \cite{Be01},  Naive Bayes (NB) \cite{Ka17},
+\paragraph*{\bf Machine learning models.}
+We have considered and compared the six most popular machine learning approaches \cite{de2018binary,tomar2013survey} which are
+Decision Tree (DT)  \cite{Ro05}, Random Forest (RF) \cite{Be01},  Naive Bayes (NB) \cite{Ka17},
 Logistic regression (LR) \cite{Ph88}, Support Vector Machine (SVM) \cite{Ev01}, Artificial Neural Network (ANN) \cite{Me19}.
-Those are all supervised learning algorithms, i.e., require a training phase.
+ All of them are supervised learning algorithms, i.e., require a \emph{training phase} with labelled data.
 
- \paragraph*{Experimentation Setting}
-Our intensive experiments have been done using the same environment and the Scikit-Learn Python library. For the data splitting and the validation of each model, we have used \emph{stratified-5-fold cross-validation}. Finally, we have measured 
- the \emph{precision}, \emph{recall}, \emph{f1-score}, \emph{true positive rate}, and
- \emph{false Positive Rate} of each algorithm on each dataset. 
+ \paragraph*{\bf Experimentation setting.}
+ We have trained and validated each algorithm over every dataset using \emph{stratified-5-fold cross-validation}\footnote{\tiny{\url{https://scikit-learn.org/stable/modules/cross\_validation.html}}} and the same experimentation environment.
+ We have relied on ML implementation of the algorithms available with the \emph{Scikit-Learn Python library}.  To evaluate the efficiency of each algorithm,  we finally 
+ measured  the \emph{precision}, \emph{recall}, \emph{f1-score}, \emph{AUC}\footnote{\tiny{\url{https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc?hl=fr}}}, and
+ \emph{specificity} of each algorithm on each dataset. 
