@@ -1,12 +1,12 @@
-\newpage
 \section{Methods}\label{Methods}
-\subsection{Datasets}
-In order to carry out  our experiments in a real setting we have collected two real world datasets about patients living in Senegal. We describe each of them in the sequel.\\
-\textbf{Data collection.} Our first dataset, that we  to refer to it as DT1, contains medical records about patients living in distinct places in Senegal. It has been collected in 2016 during the \textbf{Grand Magal of Touba}  which is one of the most popular religious event in Senegal. Such an event gathers every year several millions of persons that come from various areas around the country \cite{Ch17}.  During the event several fixed and mobile health points are set up to enable the examination and treatment of ill persons. The second dataset, denoted by DT2, has been collected by drawing our attention on medical records about patients living in the same area. We focused on the district of Diourbel,Thies and Fatick \footnote{https://en.wikipedia.org/wiki/Diourbel\_Region} where the prevalence of Malaria is very high and collected patient records from its different health structures. \\
-\textbf{Data features.} Table \ref{raw_data} contains the main characteristic of each dataset. Some of these variables (also called features or attributes) include personal data about the patient, but also signs and symptoms(e.g. lack of appetite, tiredness, fever, cephalalgia, nausea,
-arthralgia, digestive disorders, dizziness, chill, myalgia, diarrhea, and abdominal pain) of the patient reported by the doctor who treated this later. The other attributes describe clinical data such as information about the doctor's final diagnosis (the patient's disease), the outcome of the Rapid Diagnosis Test and the patient's status (i.e. admission, death or observation). For privacy reasons and certain restrictions in the use of the data, we have ignored patient personal data  during this study.
-In addition, we can observe that  both datasets are unbalanced because the proportion of observations per class is largely unequal. As an example for dataset DT1 we have 614 observations in the first class and 5108 observation in the second class. Finally, we remarked that the precision of the Rapid Diagnosis Test is around 90\% for both datasets, meaning that the systematically performed RDT in Senegal is not fully reliable.
-\begin{table*}[h]
+This work investigates the problem of Malaria occurrence prediction and proposes to comparatively evaluate the efficiency of the most popular machine algorithms for this. For that, we relied on real datasets and some performance evaluation metrics. We detail next the methodoly used in this study.
+
+\paragraph*{Data collection and preparation}
+In order to carry out  our experiments in a real setting, we have collected two real world datasets about patients living in Senegal. Our first dataset, called DT1, contains medical records about patients living in distinct places in Senegal. and has been collected in 2016 during the \textbf{Grand Magal of Touba}  a big religious event in Senegal that gathers every year several million of people \cite{Ch17}.   The second dataset, called DT2, contains clinical record about patients living in regions of Diourbel, Thies and Fatick where the prevalence of Malaria is very high. After the collection step, we have conducted some cleaning, transformation and imputation tasks on the raw datasets in order to deal with noisy information and missing values. We have then proceeded to feature selection in order to only retain the data attributes (or variables) such as lack of appetite, tiredness, fever, cephalalgia, nausea, arthralgia, digestive disorders, dizziness, chill, myalgia, diarrhea, and abdominal pain pertaining for our study.
+For privacy reasons and certain restrictions in the use of the data, we have ignored patient personal data.
+Table \ref{raw_data} summarizes the main statistics of each dataset after preparation ad the precision of RDT. 
+\begin{table}[h]
+\resizebox{\textwidth}{!}{
 \centering
   \begin{tabular}{cccccccc}
     \toprule
@@ -19,34 +19,23 @@ In addition, we can observe that  both datasets are unbalanced because the propo
     DT2 & 16 & 5809 & 2 & 14 & 5108&701 & 90.49\% \\
     \bottomrule
   \end{tabular}
+  }
   \caption{Raw Data characteristics}\label{raw_data}
-\end{table*}
+\end{table}
+We synthetically generated from DT1 and DT2 three additional datasets DT3, DT4 and DT5  respectively obtained by 
+\begin{inparaenum}[(i)]
+ \item by concatenating the DT1 and DT2 :
+\item by selecting 2354 patients who tested negative for malaria from the DT1 and adding to DT2 in order to obtain a balanced dataset;
+\item by doing oversampling on DT1 using SMOTE algorithm in order to same number of individuals in both classes.
+\end{inparaenum}
 
-From DT1 and DT2 we built three news datasets DT3, DT4 and DT5 data sets as below.\\
-\textbf{DT3:}  It is obtained by concatenating the DT1 and DT2 datasets. Thus it concerns 37,175 patients of which 9,837 are diagnosed positive for malaria.\\
-\textbf{DT4:} It is obtained by considering the 16,092 patients in the DT2 data set (including 9,223 patients with malaria). Since this DT2 is unbalanced, we randomly selected 2354 patients who tested negative for malaria from the DT1 data set at the end of the rebalance. Thus it concerns 18,446 patients, 9,223 of whom are suffering from malaria.\\
-\textbf{DT5:} is obtained by the over sampling of DT1 by the SMOTE method of python. This method consists first of dividing DT1 into two parts, one for training (train set) and the other for testing (test set). The train set being unbalanced, then we apply the SMOTE method to remedy it. Thus we obtain a new train set comprising 30,369 patients, half of whom tested positive for malaria.
-\subsection{Machine Learning algorithms studies}
-In the following we discuss about some of these methods.  Those algorithms are chosen among the most used ones in the health field according to studies\cite{de2018binary,tomar2013survey}.\\
-\textbf{Decision tree (DT)}\cite{Ro05} is a supervised classifier which is obtained by recursively partitioning the labelled set of observations. It is one of the most adopted classifiers, thanks to its simplicity and its straightforward interpretation. For CART algorithms, hyperparameters are the impurity criteria (entropy and gini), the maximum depth, the minimum samples to split and the minimum samples at a leaf
+\paragraph*{Machine learning models}
+We consider and compare the six most popular machine leanning approaches \cite{de2018binary,tomar2013survey}: 
+Decision tree (DT)  \cite{Ro05}, Random Forest (RF) \cite{Be01},  Naive Bayes (NB) \cite{Ka17},
+Logistic regression (LR) \cite{Ph88}, Support Vector Machine (SVM) \cite{Ev01}, Artificial Neural Network (ANN) \cite{Me19}.
+Those are all supervised learning algorithms, i.e., require a training phase.
 
-% Random forest
-Random Forest (RF) \cite{Be01}: RF is an ensemble approach built upon many decision tree classifiers. It is a supervised classifier which requires the same hyper parameters as DT, plus the number of trees to create and the random number of features to look at when splitting the labelled data during the training step \cite{Be01}.\\
-% Naive Bayes
-Naive Bayes classifier (NB): NB\cite{Ka17} is a\emph{supervised} machine learning algorithm, i.e. requires to be trained, used for classifying observations to given distinct classes based on \emph{input explanatory variables} (a.k.a feature or attribute).
-It is a classification technique based on the well-known \emph{Bayes’ theorem}\footnote{https://en.wikipedia.org/wiki/Bayes\%27\_theorem} with strong and naive assumptions. It simplifies learning by assuming that features are independent of given class.\\
-% Logistic Regression 
-Logistic regression (LR: LR \cite{Ph88} is a statistical model used in the machine learning domain as a supervised classifier for binary classification \cite{uddin2019comparing}. 
-It is based, in its basic form, on a logistic function to describe a binary dependent variable\cite{wang2014support,de2018binary} by considering as input 
-qualitative or/and ordinal explanatory variables  in order to measure the probability of a given class label. \\
-%Support Vector Machine
-Support Vector Machine (SVM): SVM \cite{Ev01} is a supervised classification approach whose intuition is to represent input data in a space and to determine the optimal hyper-plane that divides that space in two regions depending on the targeted value.\\
-% artificial neural networks
- Artificial Neural Network (ANN): ANN \cite{Me19} is a computational approach also referred to as a Connectionist System used in Machine Learning. ANNs are loosely modeled after the biological neural network in an attempt to replicate the way in which we learn as humans. Think of it as a computing system, structured as a series of layers, each layer consisting of one or several neurons. The types of the layers comprise \emph{input}, \emph{output} and \emph{hidden} layers \cite{anderson1972simple,raschka2015python}.
-\subsection{Experimentation Setting}
-In this section data is available for applying classification algorithm. After model creation from training data, classification operation is performed on test data. 
-All the performed tests have been done in the same machine and the same operating system. To test the performance of our six chosen ML algorithms, we relied on their Python implementations available through the scikit-learn library. Scikit-learn is an open source simple and efficient tool for predictive data analysis that implements most of the existing ML algorithms.
-For the details about the description of each parameter of ML we refer to the official documentation of the implementation of these algorithms in scikit-learn7. Concerning the segmentation of both datasets for the training of our ML algorithms and their testing we have considered the stratified-5-fold cross-validation in classification model construction and efficiency evaluation. This method is very useful to handle data with an unbalanced class distribution, increases the validation of classification and prevents from random and invalid results.\\
-%\subsection{Measurement} 
-To evaluate the performance of every considered algorithm we have considered common measures of the accuracy of a prediction system that are \emph{Precision}, \emph{Recall}, \emph{F1-score}, \emph{True Positive Rate}, and
- \emph{False Positive Rate} on both datasets augmented with semi-synthetic datasets which are obtained after imputation in order to deal with missing values.
+ \paragraph*{Experimentation Setting}
+Our intensive experiments have been done using the same environment and the Scikit-Learn Python library. For the data splitting and the validation of each model, we have used \emph{stratified-5-fold cross-validation}. Finally, we have measured 
+ the \emph{precision}, \emph{recall}, \emph{f1-score}, \emph{true positive rate}, and
+ \emph{false Positive Rate} of each algorithm on each dataset. 
